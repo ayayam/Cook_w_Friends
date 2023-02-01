@@ -1,0 +1,138 @@
+:root {
+    --green: #588B8B;
+    --white: #fff;
+    --peach: #FFD5C2;
+    --tpeach: #FFD5C2CC;
+    --orange: #F28F3B;
+    --red: #C8553D;
+    --rubik: 'Rubik', sans-serif;
+    --shadows: 'Shadows Into Light', cursive;
+    --unbounded: 'Unbounded', cursive;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background-color: var(--peach);
+}
+
+/* font-family: 'Rubik', sans-serif;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Unbounded', cursive; */
+
+/* HEADER */
+.logo {
+    max-height: 90%;
+    align-self: center;
+    margin: 1%;
+}
+
+.header-title {
+    color: var(--white);
+    align-self: center;
+    width: 50vw;
+    font-size: 3em;
+    font-family: var(--shadows);
+}
+
+.navbar {
+    display: flex;
+    height: 13vh;
+    width: 100%;
+    left: 0px;
+    margin-top: 0%;
+    background-color: var(--red);
+    text-decoration: none;
+    color: var(--white);
+    position: fixed;
+    font-family: var(--shadows);
+}
+
+.navbar-ul {
+    display: flex;
+    align-self: center;
+    list-style: none;
+    
+}
+
+.navlinks {
+    width: 13vw;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.login-navlink {
+    width: 10vw;
+    padding-left: 1vw;
+}
+
+a:link,
+a:visited {
+    color: var(--peach);
+    text-decoration: none;
+}
+
+a:active {
+    color: var(--green)
+}
+
+
+div.home-container {
+    background-image: url(/PP_imgs/maarten-van-den-heuvel-EzH46XCDQRY-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    width: 97vw;
+    margin: auto;
+    margin-top: 15vh;
+}
+
+.home-about {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.home-about-headline {
+    width: 50vw;
+    align-self: center;
+    background-color: var(--tpeach);
+    opacity: 0.9;
+    color: black;
+    border-radius: 18px;
+    margin-top: 15vh;
+    padding: 1.5%;
+    font-family: var(--shadows);
+    font-weight: 900;
+}
+
+.create-login-container {
+    background-color:  var(--tpeach);
+    width: 30vw;
+    border-radius: 18px;
+    margin-top: 5vh;
+    padding-bottom: 2%;
+    
+}
+
+.home-label {
+    color: var(--red);
+    font-size: 1.5em;
+    opacity: 1;
+}
+
+button.create-account,
+button.login {
+    background-color: var(--green);
+    color: var(--peach);
+    font-size: 1em;
+    width: fit-content;
+    padding: 2%;
+    border-radius: 20px;
+    opacity: 1;
+}
