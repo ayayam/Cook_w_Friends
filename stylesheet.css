@@ -16,7 +16,9 @@
 
 body {
     display: flex;
+    flex-direction: column;
     background-color: var(--peach);
+    align-items: flex-end;
 }
 
 /* font-family: 'Rubik', sans-serif;
@@ -24,42 +26,62 @@ font-family: 'Shadows Into Light', cursive;
 font-family: 'Unbounded', cursive; */
 
 /* HEADER */
-.logo {
-    max-height: 90%;
-    align-self: center;
-    margin: 1%;
-}
-
-.header-title {
-    color: var(--white);
-    align-self: center;
-    width: 50vw;
-    font-size: 3em;
-    font-family: var(--shadows);
-}
-
 .navbar {
     display: flex;
-    height: 13vh;
+    height: 15vh;
     width: 100%;
-    left: 0px;
     margin-top: 0%;
     background-color: var(--red);
     text-decoration: none;
     color: var(--white);
-    position: fixed;
+    position: sticky;
+    top: 0;
     font-family: var(--shadows);
+    z-index: 1;
+}
+
+.logo {
+    height: 14vh;
+    width: 9vw;
+    align-self: center;
+    margin-left: 15%;
+    margin-top: 3%;
+    
+}
+
+.navlinks:link,
+.navlinks:visited {
+    color: var(--peach);
+    text-decoration: none;
+}
+
+.navlinks:active {
+    color: var(--green)
+}
+
+.header-title {
+    display: flex;
+    align-self: center;
+    margin-left: 2%;
+}
+
+.header-title-link {
+    color: var(--white);
+    text-decoration: none;
+    width: 50vw;
+    font-size: 2em;
+    font-family: var(--shadows);   
 }
 
 .navbar-ul {
     display: flex;
+    justify-content: space-evenly;
     align-self: center;
     list-style: none;
-    
+    width: 100%;
 }
 
 .navlinks {
-    width: 13vw;
     text-align: center;
     font-size: 1.5em;
 }
@@ -69,25 +91,27 @@ font-family: 'Unbounded', cursive; */
     padding-left: 1vw;
 }
 
-a:link,
-a:visited {
-    color: var(--peach);
-    text-decoration: none;
+
+/* footer */
+.footer-container {
+    display: flex;
+    background-color: var(--orange);
+    width: 100%;
+    height: 30vh;
+    margin-top: 10vh;
 }
 
-a:active {
-    color: var(--green)
-}
-
-
+/* HOME.HTML */
 div.home-container {
     background-image: url(/PP_imgs/maarten-van-den-heuvel-EzH46XCDQRY-unsplash.jpg);
     background-position: center;
     background-size: cover;
     height: 90vh;
-    width: 97vw;
-    margin: auto;
-    margin-top: 15vh;
+    width: 100%;
+    /* margin: auto; */
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    overflow-y: scroll;
 }
 
 .home-about {
@@ -117,7 +141,6 @@ div.home-container {
     border-radius: 18px;
     margin-top: 5vh;
     padding-bottom: 2%;
-    
 }
 
 .home-label {
@@ -135,4 +158,52 @@ button.login {
     padding: 2%;
     border-radius: 20px;
     opacity: 1;
+}
+
+/* REGISTER.HTML */
+.reg-container {
+    display: flex;
+   flex-direction: column;
+   align-self: center;
+   margin-top: 10vh;
+}
+
+.form-title {
+    text-align: center;
+}
+.reg-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.req {
+    color: red;
+}
+
+.form-row {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: right;
+}
+
+.reg-label {
+}    
+
+.reg-input {
+    
+}
+
+.optional:optional {
+    background-color: lightgray;
+}
+.form-req {
+    text-align: center;
+}
+.submit {
+    background-color: var(--green);
+    width: fit-content;
+    align-self: center;
+    font-size: 1em;
+    margin-top: 5%;
+    margin-bottom: 10%;
 }
