@@ -23,6 +23,7 @@ body {
 
 /* font-family: 'Rubik', sans-serif;
 font-family: 'Shadows Into Light', cursive;
+font-family: 'Solitreo', cursive;
 font-family: 'Unbounded', cursive; */
 
 /* HEADER */
@@ -170,6 +171,7 @@ button.login {
 
 .form-title {
     text-align: center;
+    font-family: 'Unbounded', cursive;
 }
 .reg-form {
     display: flex;
@@ -187,18 +189,27 @@ button.login {
 }
 
 .reg-label {
+    font-family: 'Unbounded', cursive;
+    font-weight: 600;
 }    
 
 .reg-input {
-    
+    width: 18vw;
+    height: 4vh;
+    border-radius: 5px;
+    border-style: none;
 }
 
 .optional:optional {
     background-color: lightgray;
 }
+
 .form-req {
     text-align: center;
+    font-family: 'Unbounded', cursive;
+    font-weight: 600;
 }
+
 .submit {
     background-color: var(--green);
     width: fit-content;
@@ -206,4 +217,11 @@ button.login {
     font-size: 1em;
     margin-top: 5%;
     margin-bottom: 10%;
+    border-radius: 25px;
+    font-family: 'Unbounded', cursive;
+}
+
+.reg-submit {
+    text-decoration: none;
+    color: var(--white);
 }
