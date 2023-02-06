@@ -55,7 +55,7 @@ body {
     color: var(--peach);
     font-size: 1em;
     width: fit-content;
-    padding: 2%;
+    padding: 2% 5% 2% 5%;
     border-radius: 20px;
     opacity: 1;
 }
@@ -220,6 +220,51 @@ div.home-container {
 .login-button {
     width: 100%;
     align-self: center;
+}
+
+/* PROFILE.HTML */
+/* body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--peach);
+    align-items: flex-end;
+} */
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin-top: 5vh;
+}
+.profile-bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-self: flex-start;
+    width: 50%;
+}
+
+.portrait {
+    display: flex;
+    border: solid 2px var(--red);
+    width: 15vw;
+    height: 20vw;
+}
+.fa-image-portrait {
+    align-self: center;
+    font-size: 8em;
+}
+
+.name {
+    font-family: 'Solitreo', cursive;
+    font-size: 1.5em;
+}
+.bio {
+    font-family: 'Solitreo', cursive;
+}
+
+.profile-cookbook {
+    display: flex;
+    background-color: var(--red);
 }
 
 /* REGISTER.HTML */
