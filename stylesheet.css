@@ -43,11 +43,18 @@ body {
     border-style: none;
 }
 
+/* .main-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 10vh;
+} */
+
 .form-container {
-   display: flex;
-   flex-direction: column;
-   align-self: center;
-   margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 5vh;
 }
 
 .green-button {
@@ -75,7 +82,7 @@ body {
 
 
 /* HEADER */
-.navbar {
+.header {
     display: flex;
     height: 15vh;
     width: 100%;
@@ -94,16 +101,6 @@ body {
     justify-content: center;
     height: 100%;
     margin-left: 9px;
-}
-
-.navlinks:link,
-.navlinks:visited {
-    color: var(--peach);
-    text-decoration: none;
-}
-
-.navlinks:active {
-    color: var(--green)
 }
 
 .header-title {
@@ -129,7 +126,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-self: center;
-    list-style: none;
     width: 100%;
 }
 
@@ -138,7 +134,15 @@ body {
     font-size: 3vh;
     width: fit-content;
 }
+.navlinks:link,
+.navlinks:visited {
+    color: var(--peach);
+    text-decoration: none;
+}
 
+.navlinks:active {
+    color: var(--green)
+}
 
 @media screen and (max-width: 786px) { 
     .navlinks {
@@ -216,6 +220,12 @@ body {
 }
 
 /* LOGIN.HTML */
+/* .form-container {
+   display: flex;
+   flex-direction: column;
+   align-self: center;
+   margin-top: 5vh;
+} */
 .login-button {
     width: 100%;
     align-self: center;
@@ -232,6 +242,7 @@ body {
     display: flex;
     flex-direction: row;
     align-self: center;
+    margin-bottom: 5%;
     margin-top: 5vh;
 }
 .profile-bio {
@@ -278,19 +289,20 @@ body {
     border-style: none;
     width: 200%;
     height: 10vh;
-    margin: 15% 0 15% 35%;
+    margin: 5% 0 15% 35%;
     font-family: var(--unbounded);
     font-size: 1em;
     font-weight: 900;
 }
 
 /* REGISTER.HTML */
-.main-container {
-    display: flex;
+/* .form-container {
+   display: flex;
    flex-direction: column;
    align-self: center;
-   margin-top: 10vh;
-}
+   margin-top: 5vh;
+} */
+
 
 .form-title {
     text-align: center;
@@ -335,3 +347,6 @@ body {
     text-decoration: none;
     color: var(--white);
 }
+
+/* SHOPPING_LIST.html */
+.
