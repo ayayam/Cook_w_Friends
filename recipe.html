@@ -12,6 +12,7 @@
     <script src="https://kit.fontawesome.com/838a2de27b.js" crossorigin="anonymous"></script>
     <title>Cook with Friends</title>
 </head>
+
 <body>
     <header class="header">
         <a class="logo-container" href="home.html">
@@ -32,13 +33,22 @@
     <main class="recipe-container">
         <header class="recipe-header">
             <h1 class="recipe-title">Cinnamon Rolls</h1>
-            <button class="submit" type="submit">Edit</button>
-            <button class="submit" type="submit">Copy</button>
+            <button class="edit" type="submit">Edit</button>
+            <button class="edit" type="submit">Copy</button>
         </header>
 
+        <section class="recipe-album">
+            <button class="add-photo"><i class="fa-solid fa-camera"></i>Add Photo</button>
+            <img class="recipe-album-img" src="/PP_imgs/lauren-gray-cinnamon-rolls.jpg">
+            <img class="recipe-album-img" src="/PP_imgs/lauren-gray-cinnamon-rolls.jpg">
+            <img class="recipe-album-img" src="/PP_imgs/otto-norin-cinnamon-buns.jpg">
+            <img class="recipe-album-img" src="/PP_imgs/pille-r-priske-brushed-cinnamon-rolls.jpg">
+        </section>
+
         <section class="ingredients-instructions">
-            <section class="ingredients">
+            <form class="ingredients">
                 <h2 class="ingredients-title">Ingredients</h2>
+                <section class="just-ingredients">
                 <h3 class="ingredients-list-subtitle">Dough</h3>
                 <label class="ingredient-item">
                     <input type="checkbox">
@@ -121,13 +131,14 @@
                     <span class="checkmark">1 teaspoon <strong>vanilla extract</strong>
                     </span>
                 </label>
-                <button class="green-button" type="submit">Add to shopping list</button>
             </section>
+                <button class="green-button" type="submit">Add to shopping list</button>
+            </form>
 
             <section class="instructions">
                 <h2>Instructions</h2>
                 <ol class="recipe-instructions">
-                    <li class="instructions-step"><strong>Make the dough: </strong>Whisk the flour, sugar, and salt together in a large bowl. Set aside.</li>
+                    <li class="instructions-step"><strong> Make the dough: </strong>Whisk the flour, sugar, and salt together in a large bowl. Set aside.</li>
                     <li class="instructions-step">Combine the milk and butter together in a heatproof bowl. Microwave or use the stove and heat until the butter has melted and the mixture is warm to the touch (about 110°F/43°C, no higher). Whisk in the yeast until it has dissolved. Pour mixture into the dry ingredients, add the egg, and stir with a sturdy rubber spatula or wooden spoon OR use a stand mixer with a paddle attachment on medium speed. Mix until a soft dough forms.</li>
                     <li class="instructions-step">Transfer dough to a lightly floured surface. Using floured hands, knead the dough for 3 minutes. You should have a smooth ball of dough. If the dough is super soft or sticky, you can add a little more flour. Place in a lightly greased bowl (I use non-stick spray), cover loosely, and let the dough rest for about 10 minutes as you get the filling ingredients ready.</li>
                     <li class="instructions-step"><strong>Fill the rolls:</strong> After 10 minutes, roll the dough out in a 14×8-inch (36×20-cm) rectangle. Spread the softened butter on top. Mix together the cinnamon and brown sugar. Sprinkle it all over the dough. Roll up the dough to make a 14-inch log. Cut into 10–12 even rolls and arrange in a lightly greased 9- or 10-inch round cake pan, pie dish, or square baking pan.</li>
@@ -138,6 +149,8 @@
                 </ol>
             </section>
         </section>
+
+        
     </main>
 </body>
 </html>

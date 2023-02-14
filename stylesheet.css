@@ -82,7 +82,6 @@ body {
     background-color: var(--green);
     color: var(--peach);
     width: fit-content;
-    align-self: center;
     font-size: 1em;
     margin-top: 5%;
     margin-bottom: 10%;
@@ -90,6 +89,7 @@ body {
     font-family: 'Unbounded', cursive;
     border-style: none;
 }
+
 
 
 /* HEADER */
@@ -145,7 +145,6 @@ body {
 
 .navlinks {
     text-align: center;
-    font-size: 5vh;
     width: fit-content;
 }
 .navlinks:link,
@@ -384,6 +383,83 @@ body {
     font-weight: 900;
 }
 
+
+/* RECIPE.HTML */
+.recipe-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 95%;
+}
+.recipe-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--rubik);
+    width: 90%;
+}
+.edit {
+    background-color: var(--green);
+    color: var(--peach);
+    width: fit-content;
+    font-size: 0.8em;
+    border-radius: 25px;
+    font-family: 'Unbounded', cursive;
+    border-style: none;
+    justify-self: center;
+    margin-left: 1%;
+}
+.recipe-album {
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    width: 50%;
+    height: 75px;
+}
+.add-photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+}
+.fa-camera {
+    width: 100%;
+    height: 20px;
+}
+.ingredients-instructions {
+    display: flex;
+    font-family: var(--unbounded);
+}
+
+.just-ingredients {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+
+.ingredient-item {
+    line-height: 1.7em;
+    width: 90%;
+}
+.instructions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.recipe-instructions {
+    display: flex;
+    flex-direction: column;
+    justify-self: space-between;
+    padding-left: 5%;
+}
+.instructions-step {
+    line-height: 1.5em;
+    margin-bottom: 2em;
+}
+
 /* REGISTER.HTML */
 /* .form-container {
    display: flex;
@@ -392,12 +468,10 @@ body {
    margin-top: 5vh;
 } */
 
-
 .form-title {
     text-align: center;
     font-family: 'Unbounded', cursive;
 }
-
 
 .req {
     color: red;
@@ -406,9 +480,7 @@ body {
 .form-row {
     margin-top: 5%;
     margin-bottom: 5%;
-    
     text-align: left;
-    
 }
 
 .optional:optional {
@@ -437,29 +509,6 @@ body {
     color: var(--white);
 }
 
-
-/* RECIPE.HTML */
-.recipe-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.recipe-header {
-    display: flex;
-    flex-direction: row;
-}
-.ingredients-instructions {
-    display: flex;
-}
-.ingredients {
-    display: flex;
-    flex-direction: column;
-}
-.list-of-ingredients {
-    display: flex;
-    flex-direction: column;
-}
 
 
 /* SHOPPING_LIST.html */
