@@ -80,6 +80,7 @@ body {
 
 .submit {
     background-color: var(--green);
+    color: var(--peach);
     width: fit-content;
     align-self: center;
     font-size: 1em;
@@ -252,7 +253,6 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        justify-self: ;
     }
     .max786-recipe-list {
         display: flex;
@@ -373,6 +373,7 @@ body {
 }
 .action {
     background-color: var(--red);
+    color: var(--peach);
     border-radius: 25px;
     border-style: none;
     width: 200%;
@@ -434,6 +435,30 @@ body {
 .reg-submit {
     text-decoration: none;
     color: var(--white);
+}
+
+
+/* RECIPE.HTML */
+.recipe-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.recipe-header {
+    display: flex;
+    flex-direction: row;
+}
+.ingredients-instructions {
+    display: flex;
+}
+.ingredients {
+    display: flex;
+    flex-direction: column;
+}
+.list-of-ingredients {
+    display: flex;
+    flex-direction: column;
 }
 
 
