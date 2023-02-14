@@ -94,7 +94,7 @@ body {
 /* HEADER */
 .header {
     display: flex;
-    height: 15vh;
+    height: 60px;
     width: 100%;
     margin-top: 0%;
     background-color: var(--red);
@@ -105,12 +105,15 @@ body {
     font-family: var(--shadows);
     z-index: 1;
 }
-
+.logo-container {
+    width: 55px;
+}
 .logo {
     display: flex;
     justify-content: center;
-    height: 100%;
-    margin-left: 9px;
+    margin-top: 1.5px;
+    margin-left: 1px;
+    width: 55px;
 }
 
 .header-title {
@@ -120,7 +123,7 @@ body {
     width: 100%;
     color: var(--white);
     text-decoration: none;
-    font-size: 5vw;
+    font-size: 3em;
     font-family: var(--shadows);  
 }
 
@@ -141,7 +144,7 @@ body {
 
 .navlinks {
     text-align: center;
-    font-size: 3vh;
+    font-size: 5vh;
     width: fit-content;
 }
 .navlinks:link,
@@ -165,8 +168,7 @@ body {
         width: 30%;
     }
     .header-title {
-        font-size: 4vw;
-        
+        font-size: 5vw;
     }
 }
 @media only screen and (min-width: 769px) {
@@ -472,16 +474,18 @@ body {
 }
 
 .shopping-list-category-head {
-    align-self: center;
+    align-self: flex-start;
     font-family: var(--rubik);
     font-size: 1.3em;
     text-decoration: underline;
+    margin-bottom: 0;
+    padding-left: 8%;
 }
 .shopping-list-category {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    
+    width: 20vw;
 }
 .shopping-list-category-list {
     display: flex;
