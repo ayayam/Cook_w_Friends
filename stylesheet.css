@@ -65,6 +65,9 @@ body {
     align-self: center;
     margin-top: 5vh;
 }
+h2 {
+    font-family: var(--unbounded);
+}
 
 /* Global input CSS */
 .checkmark {
@@ -209,6 +212,24 @@ button.action:active {
 }
 
 
+/* CONTACT_US.HTML */
+.contact-us-title {
+    font-family: var(--unbounded);
+    margin-bottom: 0;
+}
+.contact-us-subtitle {
+    font-family: var(--shadows);
+    font-size: 1.3em;
+    margin-top: 0;
+}
+.contact-us-row {
+    margin-bottom: 10%;
+}
+.textarea {
+    height: 200px;
+    margin-bottom: -20px;
+}
+
 /* COOKBOOK.HTML */
 .cookbook-container {
     background-color: var(--paper);
@@ -236,8 +257,11 @@ button.action:active {
 .recipe-list {
     display: flex;
     flex-direction: column;
-    margin: 2% 0 2% 0;
+    margin: 0 0 2% 0;
     width: 100%;
+}
+.add-cookbook {
+    align-self: center;
 }
 .recipe-row {
     display: flex;
@@ -268,7 +292,7 @@ button.action:active {
 }
 @media only screen and (max-width: 768px) {
     .alphabet-nav {
-        visibility: hidden;
+        visibility: collapse;
     }
     .alphabet-nav-side {
         visibility: visible;
@@ -279,6 +303,9 @@ button.action:active {
     .max786-recipe-list {
         display: flex;
         flex-direction: row;
+    }
+    .add-cookbook {
+        margin-top: 1%;
     }
 }
 
@@ -437,16 +464,20 @@ button.action:active {
     
 
 /* EDIT_PROFILE.HTML */
+.hidden-title-769 {
+    visibility: collapse;
+} 
 .edit-profile-bio {
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 30%;
     align-items: flex-end;
+    padding-top: 24px;
 }
 .bio-edit {
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 70%;
     margin-left: 10px;
 } 
 .edit-portrait {
@@ -460,8 +491,28 @@ button.action:active {
 .edit-form-row {
     margin-top: 2%;
     margin-bottom: 2%;
-    text-align: right;
     width: 75%;
+    min-width: 285px;
+}
+.edit {
+    min-width: 100px;
+}
+@media screen and (max-width: 768px) {
+    .hidden-title-769 {
+        visibility: visible;
+    }
+    .hidden-title-768 {
+        visibility: collapse
+    }
+    .profile-container {
+        align-items: center;
+    }
+    .edit-profile-bio {
+        align-items: center;
+    }
+    .bio-edit {
+        align-items: center;
+    }
 }
 
 /* RECIPE.HTML */

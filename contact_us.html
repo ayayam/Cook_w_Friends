@@ -10,11 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Shadows+Into+Light&family=Solitreo&family=Unbounded:wght@200;300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/838a2de27b.js" crossorigin="anonymous"></script>
-    <title>Cook with Friends: Profile Page</title>
+    <title>Cook with Friends: Contact Us</title>
 </head>
+
 <body>
     <header class="header">
-        <a href="home.html"><img class="logo" src="/PP_imgs/LogoIcon.png" alt="Cook with Friends logo"></a>
+        <a class="logo-container" href="home.html">
+            <img class="logo" src="/PP_imgs/LogoIcon.png" alt="Cook with Friends logo">
+        </a>
             <a class="header-title-link header-title" href="home.html">Cook with Friends</a> 
         
         <navbar class="navbar-user">
@@ -27,25 +30,26 @@
         <i class="fa-solid fa-bars"></i>
     </header>
 
-    <main class="profile-container">
-        <section class="profile-bio">
-            <picture class="portrait">
-                <i class="fa-solid fa-image-portrait"></i>
-            </picture>
-            <section class="bio-text">
-                <p class="name">Jane Doe</p>
-                <p class="bio">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                <a  class="button" href="edit_profile.html"><button class="submit edit" type="button">Edit</button></a>
-            </section>
-        </section>
-        <section class="profile-links">
-            <ul class="user-actions">
-                <a class="profile-button" href="cookbook.html"><button class="action">My Cookbook</button></a>
-                <a class="profile-button" href href=".html"><button class="action">My Friends</button></a>
-                <a class="profile-button" href href="shopping_list.html"><button class="action">Grocery List</button></a>
-                <a class="profile-button" href href=""><button class="action">Search</button></a>
-            </ul>
-        </section>
+    <main class="form-container">
+        <header class="contact-us-header">
+            <h1 class="contact-us-title">Contact Us</h1>
+            <p class="contact-us-subtitle">Let us know of any issues, suggestions or comments!</p>
+        </header>
+        <form class="contact-us-form">
+            <p class="contact-us-row">
+                <label class="label" for="contact-form-email">E-mail:</label>
+                <input class="input" id="contact-form-email" type="email">
+            </p>
+            <p class="contact-us-row">
+                <label class="label" for="contact-form-subject">Subject:</label>
+                <input class="input" id="contact-form-subject" type="text">
+            </p>
+            <p class="contact-us-row">
+                <label class="label" for="contact-form-textarea">Type your message here: </label>
+                <textarea class="input textarea" id="contact-form-textarea" type="textarea"></textarea>
+            </p>
+            <input class="submit" type="submit" value="Submit">
+        </form>
     </main>
 
     <footer class="footer-container">
