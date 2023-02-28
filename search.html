@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/838a2de27b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Shadows+Into+Light&family=Solitreo&family=Unbounded:wght@200;300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/838a2de27b.js" crossorigin="anonymous"></script>
+    <script defer src="/scripts.js"></script>
+    <title>Cook with Friends: Cookbook</title>
+</head>
+<body>
+    <header class="header">
+        <a href="home.html"><img class="logo" src="/PP_imgs/LogoIcon.png" alt="Cook with Friends logo"></a>
+            <a class="header-title-link header-title" href="home.html">Cook with Friends</a> 
+        
+        <navbar class="navbar-user">
+            <a class="navlinks" href="profile.html">Profile</a>
+            <a class="navlinks" href="cookbook.html">Cookbook</a>
+            <a class="navlinks" href="#friends">Friends</a>
+            <a class="navlinks" href="shopping_list.html">Grocery List</a>
+            <a class="navlinks" href="search.html">Search</a>
+        </navbar>
+        <i class="fa-solid fa-bars"></i>
+    </header>
+
+    <main class="search-main">
+        <h1>Search the Site</h1>
+        <section class="search-container">
+            <form action="#">
+                <input class="search-input" type="text" placeholder="Search..." name="search">
+                <div class="dropdown">
+                    <button onclick="dropdown()" class="dropbtn">Filter Search</button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="#about">Recipes</a>
+                      <a href="#base">Friends</a>
+                      <a href="#blog">General</a>
+                    </div>
+                  </div> 
+                <button class="mag-glass" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </section>
+
+        <section class="search-results">
+            <a class="search-result-link" href="#">
+                <div class="search-result-link-top">
+                    <img class="search-result-img" src="/PP_imgs/fotointoscana-by-moira-e-raffaella-eggplant-parmesan.jpg" alt="single serving of eggplant parmesan">
+                </div>
+                <div class="search-result-link-text">
+                    <span class="search-result-title">
+                        Eggplant Parmesan
+                    </span>
+                </div>
+            </a>
+
+            <a class="search-result-link" href="">
+                <div class="search-result-link-top">
+                    <img class="search-result-img" src="/PP_imgs/sunorwind-eggplant-lasagna.jpg" alt="single serving of eggplant lasagna">
+                </div>
+                <div class="search-result-link-text">
+                    <span class="search-result-title">
+                        Eggplant Lasagna
+                    </span>
+                </div>
+            </a>
+            <a class="search-result-link" href="">
+                <div class="search-result-link-top">
+                    <img class="search-result-img" src="" alt="">
+                </div>
+                <div class="search-result-link-text">
+                    <span class="search-result-title">
+                        Roasted Eggplant
+                    </span>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <footer class="footer-container">
+
+    </footer>
+</body>
+</html>
