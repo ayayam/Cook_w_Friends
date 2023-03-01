@@ -30,15 +30,15 @@
 
     <main class="search-main">
         <h1>Search the Site</h1>
-        <section class="search-container">
-            <form action="#">
+        <section class="search-container-bar">
+            <form class="search-bar-form" action="#">
                 <input class="search-input" type="text" placeholder="Search..." name="search">
                 <div class="dropdown">
                     <button onclick="dropdown()" class="dropbtn">Filter Search</button>
                     <div id="myDropdown" class="dropdown-content">
-                      <a href="#about">Recipes</a>
-                      <a href="#base">Friends</a>
-                      <a href="#blog">General</a>
+                      <a href="#">Recipes</a>
+                      <a href="#">Friends</a>
+                      <a href="#">General</a>
                     </div>
                   </div> 
                 <button class="mag-glass" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -46,22 +46,23 @@
         </section>
 
         <section class="search-results">
+
             <a class="search-result-link" href="#">
                 <div class="search-result-link-top">
                     <img class="search-result-img" src="/PP_imgs/fotointoscana-by-moira-e-raffaella-eggplant-parmesan.jpg" alt="single serving of eggplant parmesan">
                 </div>
-                <div class="search-result-link-text">
+                <div class="search-result-link-bottom">
                     <span class="search-result-title">
                         Eggplant Parmesan
                     </span>
                 </div>
             </a>
-
+            
             <a class="search-result-link" href="">
                 <div class="search-result-link-top">
                     <img class="search-result-img" src="/PP_imgs/sunorwind-eggplant-lasagna.jpg" alt="single serving of eggplant lasagna">
                 </div>
-                <div class="search-result-link-text">
+                <div class="search-result-link-bottom">
                     <span class="search-result-title">
                         Eggplant Lasagna
                     </span>
@@ -69,11 +70,11 @@
             </a>
             <a class="search-result-link" href="">
                 <div class="search-result-link-top">
-                    <img class="search-result-img" src="" alt="">
+                    <img class="search-result-img" src="/PP_imgs/markus-spiske-grilled-eggplant.jpg" alt="eggplant slices on grill">
                 </div>
-                <div class="search-result-link-text">
+                <div class="search-result-link-bottom">
                     <span class="search-result-title">
-                        Roasted Eggplant
+                        Grilled Eggplant
                     </span>
                 </div>
             </a>
