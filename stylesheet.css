@@ -234,6 +234,7 @@ button.action:active {
 }
 
 /* COOKBOOK.HTML */
+/* FRIEND_PROFILE.HTML */
 .cookbook-container {
     background-color: var(--paper);
     display: flex;
@@ -275,13 +276,19 @@ button.action:active {
     width: 100px;
     min-width: 100px;
     height: 100px;
-    margin-right: 1%;
 }
 
 .recipe-link {
+    display: flex;
     text-decoration: none;
     font-size: 1.5em;
     font-family: var(--shadows);
+    color: var(--red);
+    
+}
+.recipe-figcaption {
+    width: 100%;
+    padding-left: 5px;
 }
 .alphabet-nav {
     font-family: var(--unbounded);
@@ -373,6 +380,7 @@ button.action:active {
 
 
 /* PROFILE.HTML */
+/* FRIEND_PROFILE.HTML */
 
 /* body {
     display: flex;
@@ -394,6 +402,7 @@ button.action:active {
     justify-content: left;
     align-self: flex-start;
     width: 50%;
+    padding: 5%;
 }
 
 .portrait {
@@ -441,7 +450,8 @@ button.action:active {
     color: var(--peach);
     border-radius: 25px;
     border-style: none;
-    width: 300px;
+    width: 100%;
+    min-width: 200px;
     height: 10vh;
     margin: 0 0 10% 0;
     font-family: var(--unbounded);
@@ -457,10 +467,14 @@ button.action:active {
         display: flex;
         flex-direction: row;
         align-self: center;
+        width: 100%;
     }
     .bio-text {
         width: 100%;
         margin-left: 5px;
+    }
+    .profile-links {
+        align-self: center;
     }
 }
     
@@ -644,6 +658,7 @@ button.action:active {
 
 
 /* SEARCH.HTML */
+/* FRIENDS.HTML */
 .search-main {
     display: flex;
     flex-direction: column;

@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Shadows+Into+Light&family=Solitreo&family=Unbounded:wght@200;300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/838a2de27b.js" crossorigin="anonymous"></script>
-    <title>Cook with Friends: Cookbook</title>
+    <script defer src="/scripts.js"></script>
+    <title>Cook with Friends: Friends</title>
 </head>
 <body>
     <header class="header">
@@ -27,46 +28,20 @@
         <i class="fa-solid fa-bars"></i>
     </header>
 
-    <main class="cookbook-container">
-        <h1 class="cookbook-title">Cookbook</h1>
-        <p class="cookbook-sub-title">Click on a recipe to open it</p>
-        <div class="search-container">
-            <form action="#">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>
-        <nav class="alphabet-nav">
-            <a class="alphabet-link" href="#">A</a>
-            <a class="alphabet-link" href="#">B</a>
-            <a class="alphabet-link" href="#">C</a>
-            <a class="alphabet-link" href="#">D</a>
-            <a class="alphabet-link" href="#">E</a>
-            <a class="alphabet-link" href="#">F</a>
-            <a class="alphabet-link" href="#">G</a>
-            <a class="alphabet-link" href="#">H</a>
-            <a class="alphabet-link" href="#">I</a>
-            <a class="alphabet-link" href="#">J</a>
-            <a class="alphabet-link" href="#">K</a>
-            <a class="alphabet-link" href="#">L</a>
-            <a class="alphabet-link" href="#">M</a>
-            <a class="alphabet-link" href="#">N</a>
-            <a class="alphabet-link" href="#">O</a>
-            <a class="alphabet-link" href="#">P</a>
-            <a class="alphabet-link" href="#">Q</a>
-            <a class="alphabet-link" href="#">R</a>
-            <a class="alphabet-link" href="#">S</a>
-            <a class="alphabet-link" href="#">T</a>
-            <a class="alphabet-link" href="#">U</a>
-            <a class="alphabet-link" href="#">V</a>
-            <a class="alphabet-link" href="#">W</a>
-            <a class="alphabet-link" href="#">X</a>
-            <a class="alphabet-link" href="#">Y</a>
-            <a class="alphabet-link" href="#">Z</a>
-        </nav>
-    <div class="max786-recipe-list">
+    <main class="profile-container">
+        <section class="profile-bio">
+            <picture class="portrait">
+                <i class="fa-solid fa-image-portrait"></i>
+            </picture>
+            <section class="bio-text">
+                <p class="name">Friend McFriend</p>
+                <p class="bio">I am a home cook from Who-ville with a passion for bread baking!</p>
+                <button class="submit edit" onclick="">Add Friend</button>
+                <button class="submit edit" onclick="">Block</button>
+            </section>
+        </section>
         <section class="recipe-list">
-            <button class="green-button edit add-cookbook" type="submit" onclick="">Add New Recipe</button>
+            
             <figure class="recipe-row">
                 <a class="recipe-link" href="#">
                 <img class="recipe-img" src="/PP_imgs/lauren-gray-cinnamon-rolls.jpg"></a>
@@ -98,35 +73,6 @@
                 <figcaption class="recipe-figcaption"><a class="recipe-link" href="#">Tomato and Spinach Pasta</a></figcaption>
             </figure>
         </section>
-        <nav class="alphabet-nav-side">
-            <a class="alphabet-link" href="#">A</a>
-            <a class="alphabet-link" href="#">B</a>
-            <a class="alphabet-link" href="#">C</a>
-            <a class="alphabet-link" href="#">D</a>
-            <a class="alphabet-link" href="#">E</a>
-            <a class="alphabet-link" href="#">F</a>
-            <a class="alphabet-link" href="#">G</a>
-            <a class="alphabet-link" href="#">H</a>
-            <a class="alphabet-link" href="#">I</a>
-            <a class="alphabet-link" href="#">J</a>
-            <a class="alphabet-link" href="#">K</a>
-            <a class="alphabet-link" href="#">L</a>
-            <a class="alphabet-link" href="#">M</a>
-            <a class="alphabet-link" href="#">N</a>
-            <a class="alphabet-link" href="#">O</a>
-            <a class="alphabet-link" href="#">P</a>
-            <a class="alphabet-link" href="#">Q</a>
-            <a class="alphabet-link" href="#">R</a>
-            <a class="alphabet-link" href="#">S</a>
-            <a class="alphabet-link" href="#">T</a>
-            <a class="alphabet-link" href="#">U</a>
-            <a class="alphabet-link" href="#">V</a>
-            <a class="alphabet-link" href="#">W</a>
-            <a class="alphabet-link" href="#">X</a>
-            <a class="alphabet-link" href="#">Y</a>
-            <a class="alphabet-link" href="#">Z</a>
-        </nav>
-    </div>
     </main>
 
     <footer class="footer-container">
