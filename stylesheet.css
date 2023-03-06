@@ -128,6 +128,8 @@ button.action:active {
     color: var(--green);
 }
 
+
+
 /* HEADER */
 .header {
     display: flex;
@@ -174,7 +176,7 @@ button.action:active {
 
 .navbar-user {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-self: center;
     width: 100%;
 }
@@ -193,6 +195,8 @@ button.action:active {
     color: var(--green)
 }
 
+
+
 @media only screen and (max-width: 768px) { 
     .navlinks {
         display: none;
@@ -201,15 +205,66 @@ button.action:active {
         display: flex;
         color: var(--peach);
         align-self: center;
-        width: 30%;
     }
+    
     .header-title {
-        font-size: 5vw;
+        font-size: 2em;
+        
+    }
+    .navbar-user,
+    .navbar-new {
+        width: 10%;
+    }
+
+    .hamburger-dropdown {
+        position: relative;
+        display: inline-block;
+        width: 10%;
+        padding-top: 22px;
+    }
+    .hamburger-menu {
+        display: flex;
+        cursor: pointer;
+        align-self: center;
+        left: auto;
+        right: 0;
+        text-align: right;
+    }
+    .hamburger-dropdown-content {
+        display: none;
+        position: absolute;
+        width: 220%;
+        min-width: 70px;
+        border: none;
+        z-index: 1;
+        font-family: var(--shadows);
+        background-color: var(--red);
+        font-size: 16px;
+        left: auto;
+        right: 0;
+        text-align: right;
+    }
+    
+    .hamburger-dropdown-content a {
+        color: var(--peach);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .hamburger-dropdown-content a:hover {
+        color: var(--orange);
+    }
+    .hamburger-dropdown-content a:active {
+        color: var(--red);
+    }
+    .hamburger-show {
+        display: block;
     }
 }
 @media only screen and (min-width: 769px) {
+    .hamburger-dropdown,
     .fa-bars {
-    visibility: hidden;
+    visibility:collapse;
     }
 }
 
@@ -226,7 +281,7 @@ button.action:active {
 }
 .footer-logo {
    width: 50%;
-   
+   min-width: 180px;
 }
 .footer-nav {
     width: 45%;
@@ -238,7 +293,7 @@ button.action:active {
     color: var(--peach);
     text-decoration: none;
     font-family: var(--rubik);
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 /* CONTACT_US.HTML */
@@ -346,6 +401,55 @@ button.action:active {
 
 
 /* HOME.HTML */
+/* header hamburger menu */
+@media only screen and (max-width: 768px) {
+    .home-hamburger-dropdown {
+        position: relative;
+        display: inline-block;
+        width: 10%;
+        padding-top: 22px;
+    }
+    .home-hamburger-menu {
+        display: flex;
+        cursor: pointer;
+        align-self: center;
+        left: auto;
+        right: 0;
+        text-align: right;
+    }
+    .home-hamburger-dropdown-content {
+        display: none;
+        position: absolute;
+        width: 220%;
+        min-width: 70px;
+        border: none;
+        z-index: 1;
+        font-family: var(--shadows);
+        background-color: var(--red);
+        font-size: 16px;
+        left: auto;
+        right: 0;
+        text-align: right;
+    }
+    
+    .home-hamburger-dropdown-content a {
+        color: var(--peach);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .home-hamburger-dropdown-content a:hover {
+        color: var(--orange);
+    }
+    .home-hamburger-dropdown-content a:active {
+        color: var(--red);
+    }
+    .home-hamburger-show {
+        display: block;
+    }
+}
+    
+}
 .home-container {
     background-image: url(/PP_imgs/maarten-van-den-heuvel-EzH46XCDQRY-unsplash.jpg);
     background-position: center;
@@ -539,6 +643,7 @@ button.action:active {
 /* .edit {
     min-width: 100px;
 } */
+
 @media screen and (max-width: 768px) {
     .hidden-title-769 {
         visibility: visible;
