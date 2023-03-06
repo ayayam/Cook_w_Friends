@@ -226,9 +226,6 @@ button.action:active {
         display: flex;
         cursor: pointer;
         align-self: center;
-        left: auto;
-        right: 0;
-        text-align: right;
         margin-bottom: 20px;
     }
     .hamburger-dropdown-content {
@@ -657,6 +654,7 @@ button.action:active {
     flex-direction: column;
     justify-content: center;
     border: none;
+    cursor: pointer;
 }
 .fa-camera {
     width: 100%;
