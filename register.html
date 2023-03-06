@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Shadows+Into+Light&family=Solitreo&family=Unbounded:wght@200;300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/838a2de27b.js" crossorigin="anonymous"></script>
+    <script defer src="/scripts.js"></script>
     <title>Cook with Friends: New User Registration</title>
 </head>
 
@@ -23,7 +24,14 @@
             <a class="navlinks login-navlink" href="login.html">Login</a>
             <a class="navlinks" href="contact_us.html">Contact Us</a>
         </navbar>
-        <i class="fa-solid fa-bars"></i>
+        <section class="hamburger-dropdown">
+            <a class="hamburger-menu" onclick="hamburgerDropdown()"><i class="fa-solid fa-bars"></i></a>
+            <div id="hamburgerDropdown" class="hamburger-dropdown-content">
+                <a class="hamburger-link" href="register.html">New Users</a>
+                <a class="hamburger-link" href="login.html">Login</a>
+                <a class="hamburger-link" href="contact_us.html">Contact Us</a>
+            </div> 
+        </section>
     </header>
 
     <main class="form-container">

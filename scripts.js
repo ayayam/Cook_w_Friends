@@ -4,9 +4,7 @@ function hamburgerDropdown() {
   document.getElementById("hamburgerDropdown").classList.toggle("hamburger-show");
 }
 
-function homeHamburgerDropdown() {
-  document.getElementById("homeHamburgerDropdown").classList.toggle("home-hamburger-show");
-}
+
 
 function dropdown() {
     document.getElementById("myDropdown").classList.toggle("show");

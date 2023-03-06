@@ -229,12 +229,12 @@ button.action:active {
         left: auto;
         right: 0;
         text-align: right;
+        margin-bottom: 20px;
     }
     .hamburger-dropdown-content {
         display: none;
         position: absolute;
-        width: 220%;
-        min-width: 70px;
+        width: 97px;
         border: none;
         z-index: 1;
         font-family: var(--shadows);
@@ -247,7 +247,8 @@ button.action:active {
     
     .hamburger-dropdown-content a {
         color: var(--peach);
-        padding: 12px 16px;
+        padding-right: 10px;
+        padding-bottom: 5px;
         text-decoration: none;
         display: block;
     }
@@ -401,55 +402,8 @@ button.action:active {
 
 
 /* HOME.HTML */
-/* header hamburger menu */
-@media only screen and (max-width: 768px) {
-    .home-hamburger-dropdown {
-        position: relative;
-        display: inline-block;
-        width: 10%;
-        padding-top: 22px;
-    }
-    .home-hamburger-menu {
-        display: flex;
-        cursor: pointer;
-        align-self: center;
-        left: auto;
-        right: 0;
-        text-align: right;
-    }
-    .home-hamburger-dropdown-content {
-        display: none;
-        position: absolute;
-        width: 220%;
-        min-width: 70px;
-        border: none;
-        z-index: 1;
-        font-family: var(--shadows);
-        background-color: var(--red);
-        font-size: 16px;
-        left: auto;
-        right: 0;
-        text-align: right;
-    }
-    
-    .home-hamburger-dropdown-content a {
-        color: var(--peach);
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-    .home-hamburger-dropdown-content a:hover {
-        color: var(--orange);
-    }
-    .home-hamburger-dropdown-content a:active {
-        color: var(--red);
-    }
-    .home-hamburger-show {
-        display: block;
-    }
-}
-    
-}
+
+
 .home-container {
     background-image: url(/PP_imgs/maarten-van-den-heuvel-EzH46XCDQRY-unsplash.jpg);
     background-position: center;
@@ -457,6 +411,7 @@ button.action:active {
     height: 90vh;
     width: 100%;
     overflow-y: scroll;
+    padding-bottom: 10%;
 }
 
 .home-about {
