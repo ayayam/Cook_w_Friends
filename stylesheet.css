@@ -146,7 +146,9 @@ button.action:active {
     z-index: 1;
 }
 .logo-container {
-    width: 55px;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 .logo {
     display: flex;
