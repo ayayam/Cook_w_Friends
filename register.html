@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="https://kit.fontawesome.com/838a2de27b.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Shadows+Into+Light&family=Solitreo&family=Unbounded:wght@200;300&display=swap" rel="stylesheet">
@@ -19,11 +18,11 @@
         <a href="home.html"><img class="logo" src="/PP_imgs/LogoIcon.png" alt="Cook with Friends logo"></a>
             <a class="header-title-link header-title" href="home.html">Cook with Friends</a> 
         
-        <navbar class="navbar-new">
+        <nav class="navbar-new">
             <a class="navlinks" href="register.html">New Users</a>
             <a class="navlinks login-navlink" href="login.html">Login</a>
             <a class="navlinks" href="contact_us.html">Contact Us</a>
-        </navbar>
+        </nav>
         <section class="hamburger-dropdown">
             <a class="hamburger-menu" onclick="hamburgerDropdown()"><i class="fa-solid fa-bars"></i></a>
             <div id="hamburgerDropdown" class="hamburger-dropdown-content">
@@ -38,31 +37,31 @@
         <h1 class="form-title">New User? Sign up here.</h1>
         <form class="form">
             <div class="form-row">
-                <label class="label" id="first-name">First Name:<span class="req">*</span></label>
-                <input class="input" id="first-name" type="text" placeholder="First name" required>
+                <label class="label" for="first-name">First Name:<span class="req">*</span></label>
+                <input class="input" id="first-name" name ="first-name" type="text" placeholder="First name" required>
             </div>
             <div class="form-row">
-                <label class="label" id="last-name">Last Name:<span class="req">*</span></label>
-                <input class="input" id="last-name" type="text" placeholder="Last name" required>
+                <label class="label" for="last-name">Last Name:<span class="req">*</span></label>
+                <input class="input" id="last-name" name="last-name" type="text" placeholder="Last name" required>
             </div>
             <div class="form-row">
-                <label class="label" id="nickname">Nickname:</label>
-                <input class="input optional" id="nickname" type="text" placeholder="Optional">
+                <label class="label" for="nickname">Nickname: (not required)</label>
+                <input class="input" id="nickname" name="nickname" type="text" placeholder="Optional">
             </div>
             <div class="form-row">
-                <label class="label" id="email">Email Address:<span class="req">*</span></label>
-                <input class="input" id="email" type="email" placeholder="xyz@mail.com" required>
+                <label class="label" for="email">Email Address:<span class="req">*</span></label>
+                <input class="input" id="email" name="email"type="email" placeholder="xyz@mail.com" required>
             </div>
             <div class="form-row">
-                <label class="label" id="pwd" >Password:<span class="req">*</span></label>
-                <input class="input" id="pwd" type="password" placeholder="Password" required>
+                <label class="label" for="pwd" >Password:<span class="req">*</span></label>
+                <input class="input" id="pwd" name="pwd" type="password" placeholder="Password" required>
             </div>
             <div class="form-row">
-                <label class="label" id="pwd">Confirm Password:<span class="req">*</span></label>
-                <input class="input" id="pwd" type="password" required>
+                <label class="label" for="pwd">Confirm Password:<span class="req">*</span></label>
+                <input class="input" id="pwd" name="pwd" type="password" required>
             </div>
             <p class="form-req"><span class="req">*</span> - Required Field</p>
-            <a class="button" href="#"><button class="submit edit join" type="submit">Join Us</button></a>
+            <button class="submit edit join button" type="submit">Join Us</button>
         </form>
     </main>
 

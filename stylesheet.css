@@ -17,6 +17,7 @@ font-family: 'Unbounded', cursive; */
 
 * {
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
@@ -726,9 +727,6 @@ button.action:active {
     width: 100%;
 }
 
-.optional:optional {
-    background-color: lightgray;
-}
 
 .form-req {
     text-align: center;
@@ -830,11 +828,10 @@ a.search-result-link {
     width: 150px;
     height: 200px;
 }
-.search-result-link-bottom {
-   
-}
 .search-result-title {
     font-family: var(--shadows);
+    font-size: 1.3em;
+    color: var(--red);
 }
 @media  screen and (max-width: 368px) {
     .search-container-bar {

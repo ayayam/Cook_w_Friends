@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="https://kit.fontawesome.com/838a2de27b.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Shadows+Into+Light&family=Solitreo&family=Unbounded:wght@200;300&display=swap" rel="stylesheet">
@@ -19,11 +18,11 @@
         <a href="home.html"><img class="logo" src="/PP_imgs/LogoIcon.png" alt="Cook with Friends logo"></a>
             <a class="header-title-link header-title" href="home.html">Cook with Friends</a> 
         
-        <navbar class="navbar-new">
+        <nav class="navbar-new">
             <a class="navlinks" href="register.html">New Users</a>
             <a class="navlinks login-navlink" href="login.html">Login</a>
             <a class="navlinks" href="contact_us.html">Contact Us</a>
-        </navbar>
+        </nav>
         <section class="hamburger-dropdown">
             <a class="hamburger-menu" onclick="hamburgerDropdown()"><i class="fa-solid fa-bars"></i></a>
             <div id="hamburgerDropdown" class="hamburger-dropdown-content">
@@ -38,12 +37,12 @@
         <form class="form">
             <h1 class="form-title">Welcome Back!</h1>
             <div class="form-row">
-                <label class="label">Username:</label>
-                <input type="text" class="input">
+                <label class="label" for="login-username">Username:</label>
+                <input type="text" id="login-username" name="login-username" class="input">
             </div>
             <div class="form-row">
-                <label class="label">Password:</label>
-                <input type="text" class="input">
+                <label class="label" for="login-password">Password:</label>
+                <input type="text" id="login-password" name="login-password" class="input">
             </div>
                 <button class="submit edit" type="submit">Login</button>
         </form>

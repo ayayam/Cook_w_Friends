@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="https://kit.fontawesome.com/838a2de27b.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Shadows+Into+Light&family=Solitreo&family=Unbounded:wght@200;300&display=swap" rel="stylesheet">
@@ -21,11 +20,11 @@
         </a>
             <a class="header-title-link header-title" href="home.html">Cook with Friends</a> 
         
-        <navbar class="navbar-new">
+        <nav class="navbar-new">
             <a class="navlinks"href="register.html">New Users</a>
             <a class="navlinks login-navlink" href="login.html">Login</a>
             <a class="navlinks" href="contact_us.html">Contact Us</a>
-        </navbar>
+        </nav>
         
         <section class="hamburger-dropdown">
             <a class="hamburger-menu" onclick="hamburgerDropdown()"><i class="fa-solid fa-bars"></i></a>
@@ -43,19 +42,19 @@
             <p class="contact-us-subtitle">Let us know of any issues, suggestions or comments!</p>
         </header>
         <form class="contact-us-form">
-            <p class="contact-us-row">
+            <div class="contact-us-row">
                 <label class="label" for="contact-form-email">E-mail:</label>
-                <input class="input" id="contact-form-email" type="email">
-            </p>
-            <p class="contact-us-row">
+                <input class="input" id="contact-form-email" name="contact-form-email" type="email">
+            </div>
+            <div class="contact-us-row">
                 <label class="label" for="contact-form-subject">Subject:</label>
-                <input class="input" id="contact-form-subject" type="text">
-            </p>
-            <p class="contact-us-row">
+                <input class="input" id="contact-form-subject" name="contact-form-subject" type="text">
+            </div>
+            <div class="contact-us-row">
                 <label class="label" for="contact-form-textarea">Type your message here: </label>
-                <textarea class="input textarea" id="contact-form-textarea" type="textarea"></textarea>
-            </p>
-            <input class="submit" type="submit" value="Submit">
+                <textarea class="input textarea" id="contact-form-textarea" id="contact-form-textarea" type="textarea"></textarea>
+            </div>
+            <button class="submit" type="submit">Submit</button>
         </form>
     </main>
 
