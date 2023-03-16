@@ -194,8 +194,9 @@ button.action:active {
     text-decoration: none;
 }
 
+.navlinks:hover,
 .navlinks:active {
-    color: var(--green)
+    color: var(--green);
 }
 
 
