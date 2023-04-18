@@ -1,26 +1,5 @@
-<%- include(../partials/head) -%>
-<header class="header">
-    <a class="logo-container" href="home.html">
-        <img class="logo" src="/PP_imgs/LogoIcon.png" alt="Cook with Friends logo">
-        <p class="header-title-link header-title" href="home.html">Cook with Friends</p> 
-    </a>
-    
-    <nav class="navbar-new">
-        <a class="navlinks"href="register.html">New Users</a>
-        <a class="navlinks login-navlink" href="login.html">Login</a>
-        <a class="navlinks" href="contact_us.html">Contact Us</a>
-    </nav>
-
-    <section class="hamburger-dropdown">
-        <a class="hamburger-menu" onclick="hamburgerDropdown()"><i class="fa-solid fa-bars"></i></a>
-        <div id="hamburgerDropdown" class="hamburger-dropdown-content">
-            <a class="hamburger-link" href="register.html">New Users</a>
-            <a class="hamburger-link" href="login.html">Login</a>
-            <a class="hamburger-link" href="contact_us.html">Contact Us</a>
-        </div> 
-    </section>
-    
-</header>
+<%- include('../partials/head') -%>
+<%- include('../partials/navbar(newUser)') -%>
 
 <main class="home-container">
     <section class="home-about">
@@ -35,17 +14,4 @@
     </section>
 </main>
 
-<footer class="footer-container">
-    <a class="footer-logo-container" href="home.html">
-        <img class="footer-logo"src="/PP_imgs/logo_orange.png" alt="Cook with Friends logo">
-    </a>
-    <section class="footer-nav">
-        <a class="footer-link" href="register.html">Create an Account</a>
-        <a class="footer-link" href="login.html">Log In</a>
-        <a class="footer-link" href="contact_us.html">Contact Us</a>
-    </section>
-</footer>
-
-
-</body>
-</html>
+<%- include('../partials/footer(newUser)') -%>
