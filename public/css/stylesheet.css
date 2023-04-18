@@ -171,10 +171,11 @@ button.action:active {
 
 .navbar-new {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-self: center;
     list-style: none;
     width: 100%;
+    float: right;
 }
 
 .navbar-user {
@@ -186,7 +187,7 @@ button.action:active {
 
 .navlinks {
     text-align: center;
-    width: fit-content;
+    width: 100%;
 }
 .navlinks:link,
 .navlinks:visited {
@@ -266,7 +267,7 @@ button.action:active {
 @media only screen and (min-width: 769px) {
     .hamburger-dropdown,
     .fa-bars {
-    visibility:collapse;
+    display: none;
     }
 }
 
