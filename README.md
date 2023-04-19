@@ -23,7 +23,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/ayayam/]
 
 
 
@@ -37,7 +37,7 @@
 <h3 align="center">Cook with Friends</h3>
 
   <p align="center">
-    project_description
+    Friends have the best recipes! Connect over culinary tastes and share recipes, cookbooks, tips or compliments with Cook With Friends!
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
@@ -195,9 +195,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Aya Yamamoto - [linkedin/ayayam](https://www.linkedin.com/in/ayayam/)
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/ayayam/Cook_w_Friends.git](https://github.com/ayayam/Cook_w_Friends.git)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
