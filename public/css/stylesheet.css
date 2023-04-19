@@ -951,6 +951,9 @@ a.search-result-link {
     border-radius: 10px;
 }
 
+.shop-list-checkbox:checked + span {
+    text-decoration: line-through;
+}
 
 @media only screen and (max-width: 768px) {
     .sorted-shopping-list {
