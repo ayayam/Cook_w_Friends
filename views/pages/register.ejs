@@ -1,39 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Shadows+Into+Light&family=Solitreo&family=Unbounded:wght@200;300&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/838a2de27b.js" crossorigin="anonymous"></script>
-    <script defer src="/scripts.js"></script>
-    <title>Cook with Friends: New User Registration</title>
-</head>
-
-<body>
-    <header class="header">
-        <a class="logo-container" href="home.html">
-            <img class="logo" src="/PP_imgs/LogoIcon.png" alt="Cook with Friends logo">
-            <p class="header-title-link header-title" href="home.html">Cook with Friends</p> 
-        </a>
-        
-        <nav class="navbar-new">
-            <a class="navlinks" href="register.html">New Users</a>
-            <a class="navlinks login-navlink" href="login.html">Login</a>
-            <a class="navlinks" href="contact_us.html">Contact Us</a>
-        </nav>
-        <section class="hamburger-dropdown">
-            <a class="hamburger-menu" onclick="hamburgerDropdown()"><i class="fa-solid fa-bars"></i></a>
-            <div id="hamburgerDropdown" class="hamburger-dropdown-content">
-                <a class="hamburger-link" href="register.html">New Users</a>
-                <a class="hamburger-link" href="login.html">Login</a>
-                <a class="hamburger-link" href="contact_us.html">Contact Us</a>
-            </div> 
-        </section>
-    </header>
+<%- include('../partials/head') -%>
+<%- include('../partials/navbar(newUser)') -%>
 
     <main class="form-container">
         <h1 class="form-title">New User? Sign up here.</h1>
@@ -67,16 +33,4 @@
         </form>
     </main>
 
-    <footer class="footer-container">
-        <a class="footer-logo-container" href="home.html">
-            <img class="footer-logo"src="/PP_imgs/logo_orange.png" alt="Cook with Friends logo">
-        </a>
-        <section class="footer-nav">
-            <a class="footer-link" href="register.html">Create an Account</a>
-            <a class="footer-link" href="login.html">Log In</a>
-            <a class="footer-link" href="contact_us.html">Contact Us</a>
-        </section>
-    </footer>
-    
-</body>
-</html>
+<%- include('../partials/footer(newUser)') -%>

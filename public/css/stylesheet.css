@@ -779,27 +779,28 @@ button.action:active {
 }
 .search-container-bar {
     display: flex;
-    justify-content: center;
-    vertical-align: top;
     font-size: 0;
 }
 
 .search-input {
-    height: 30px;
+    height: 100%;
     border-style: none;
+    padding: 0;
 }
 .dropbtn {
     background-color: var(--green);
     color: var(--peach);
-    padding: 10px;
+    padding: 8px;
     font-size: 16px;
     border: none;
     cursor: pointer;
     font-family: var(--rubik);
+    margin-top: 3px;
   }
 .dropdown {
     position: relative;
     display: inline-block;
+    height: 100%;
 }
 .dropdown-content {
     display: none;
@@ -884,7 +885,7 @@ a.search-result-link {
     width: 90%;
     min-width: 175px;
     margin: 5% 0 5% 0;
-    background: url(/PP_imgs/transparent_lined_paper.png) no-repeat center center fixed;
+    background: url(/image/transparent_lined_paper.png) no-repeat center center fixed;
     background-size: 105vw 200vh;
 }
 
@@ -897,7 +898,6 @@ a.search-result-link {
     font-family: var(--unbounded);
     font-size: 1.8em;
 }
-
 
 .sorted-shopping-list {
     display: flex;
@@ -912,6 +912,7 @@ a.search-result-link {
     align-self: flex-start;
     font-family: var(--rubik);
     font-size: 1.3em;
+    font-weight: 600;
     text-decoration: underline;
     margin-bottom: 0;
     padding-left: 8%;
@@ -921,15 +922,15 @@ a.search-result-link {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 20vw;
-    min-width: 150px;
+    width: 30%;
+    min-width: 165px;
 }
 .shopping-list-category-list {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     font-family: var(--shadows);
-    font-size: 1.05em;
+    font-size: 1.2em;
     padding-left: 0;
 }
 .shopping-list-item {
