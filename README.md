@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ayayam/Cook_w_Friends.git">
-    <img src="/public/image/logo_orange.png" alt="Cook with Friends logo" width="80" height="80">
+    <img src="/public/image/logo_orange.png" alt="Cook with Friends logo" width="150" height="150">
   </a>
 
 <h3 align="center">Cook with Friends</h3>
