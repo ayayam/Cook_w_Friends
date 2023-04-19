@@ -1,42 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Shadows+Into+Light&family=Solitreo&family=Unbounded:wght@200;300&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/838a2de27b.js" crossorigin="anonymous"></script>
-    <script defer src="/scripts.js"></script>
-    <title>Cook with Friends: Friend's Profile</title>
-</head>
-<body>
-    <header class="header">
-        <a class="logo-container" href="home.html">
-            <img class="logo" src="/PP_imgs/LogoIcon.png" alt="Cook with Friends logo">
-            <p class="header-title-link header-title" href="home.html">Cook with Friends</p> 
-        </a>
-        
-        <nav class="navbar-user">
-            <a class="navlinks" href="profile.html">Profile</a>
-            <a class="navlinks" href="cookbook.html">Cookbook</a>
-            <a class="navlinks" href="friends.html">Friends</a>
-            <a class="navlinks" href="shopping_list.html">Shopping List</a>
-            <a class="navlinks" href="search.html">Search</a>
-        </nav>
-        <section class="hamburger-dropdown">
-            <a class="hamburger-menu" onclick="hamburgerDropdown()"><i class="fa-solid fa-bars"></i></a>
-            <div id="hamburgerDropdown" class="hamburger-dropdown-content">
-                <a class="hamburger-link" href="profile.html">Profile</a>
-                <a class="hamburger-link" href="cookbook.html">Cookbook</a>
-                <a class="hamburger-link" href="friends.html">Friends</a>
-                <a class="hamburger-link" href="shopping_list.html">Shopping List</a>
-                <a class="hamburger-link" href="search.html">Search</a>
-            </div> 
-        </section>
-    </header>
+<%- include('../partials/head') -%>
+<%- include('../partials/navbar(registered)') -%>
 
     <main class="profile-container">
         <section class="profile-bio">
@@ -54,48 +17,35 @@
             
             <figure class="recipe-row">
                 <a class="recipe-link" href="#">
-                <img class="recipe-img" src="/PP_imgs/lauren-gray-cinnamon-rolls.jpg" alt=""></a>
+                <img class="recipe-img" src="/image/lauren-gray-cinnamon-rolls.jpg" alt=""></a>
                 <figcaption class="recipe-figcaption"><a class="recipe-link" href="#">Cinnamon Rolls</a></figcaption>
             </figure>
             <figure class="recipe-row">
                 <a class="recipe-link" href="#">
-                <img class="recipe-img" src="/PP_imgs/pappardelle.jpg" alt=""></a>
+                <img class="recipe-img" src="/image/pappardelle.jpg" alt=""></a>
                 <figcaption class="recipe-figcaption"><a class="recipe-link" href="#">Creamy Butternut, Bacon and Leek Pappardelle</a></figcaption>
             </figure>
             <figure class="recipe-row">
                 <a class="recipe-link" href="#">
-                <img class="recipe-img" src="/PP_imgs/stefen-tan-katsu-curry.jpg" alt=""></a>
+                <img class="recipe-img" src="/image/stefen-tan-katsu-curry.jpg" alt=""></a>
                 <figcaption class="recipe-figcaption"><a class="recipe-link" href="#">Japanese Katsu Curry</a></figcaption>
             </figure>
             <figure class="recipe-row">
                 <a class="recipe-link" href="#">
-                <img class="recipe-img" src="/PP_imgs/jonathan-farber-lemon-chicken.jpg" alt=""></a>
+                <img class="recipe-img" src="/image/jonathan-farber-lemon-chicken.jpg" alt=""></a>
                 <figcaption class="recipe-figcaption"><a class="recipe-link" href="#">Lemon Garlic Chicken</a></figcaption>
             </figure>
             <figure class="recipe-row">
                 <a class="recipe-link" href="#">
-                <img class="recipe-img" src="/PP_imgs/pexels-alesia-kozik-lentil-soup.jpg" alt=""></a>
+                <img class="recipe-img" src="/image/pexels-alesia-kozik-lentil-soup.jpg" alt=""></a>
                 <figcaption class="recipe-figcaption"><a class="recipe-link" href="#">Lentil Soup</a></figcaption>
             </figure>
             <figure class="recipe-row">
                 <a class="recipe-link" href="#">
-                <img class="recipe-img" src="/PP_imgs/amirali-mirhashemian-tomato-spinach-pasta.jpg" alt=""></a>
+                <img class="recipe-img" src="/image/amirali-mirhashemian-tomato-spinach-pasta.jpg" alt=""></a>
                 <figcaption class="recipe-figcaption"><a class="recipe-link" href="#">Tomato and Spinach Pasta</a></figcaption>
             </figure>
         </section>
     </main>
 
-    <footer class="footer-container">
-        <a class="footer-logo-container" href="home.html">
-            <img class="footer-logo"src="/PP_imgs/logo_orange.png" alt="Cook with Friends logo">
-        </a>
-        <section class="footer-nav">
-            <a class="footer-link" href="profile.html">Profile</a>
-            <a class="footer-link" href="cookbook.html">Cookbook</a>
-            <a class="footer-link" href="friends.html">Friends</a>
-            <a class="footer-link" href="shopping_list.html">Shopping List</a>
-            <a class="footer-link" href="search.html">Search</a>
-        </section>
-    </footer>
-</body>
-</html>
+<%- include('../partials/footer(registered)') -%>
