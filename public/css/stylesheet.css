@@ -408,6 +408,8 @@ button.action:active {
 }
 
 
+/* FRIENDS.HTML BELOW WITH SEARCH.HTML */
+
 /* HOME.HTML */
 
 
@@ -602,16 +604,14 @@ button.action:active {
     width: 75%;
     min-width: 285px;
 }
-/* .edit {
-    min-width: 100px;
-} */
+
 
 @media screen and (max-width: 768px) {
     .hidden-title-769 {
         visibility: visible;
     }
     .hidden-title-768 {
-        visibility: collapse
+        display: none;
     }
     .profile-container {
         align-items: center;
