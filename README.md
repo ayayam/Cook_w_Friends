@@ -37,7 +37,7 @@
 <h3 align="center">Cook with Friends</h3>
 
   <p align="center">
-    Friends have the best recipes! Connect over culinary tastes and share recipes, cookbooks, tips or compliments with Cook With Friends!
+    Friends have the best recipes! Connect and make new friends over culinary tastes. Share recipes and cookbooks and your passion for food creation!
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
@@ -94,13 +94,14 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 ### Built With
 
 * [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* JavaScript
+* HTML
+* CSS
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,7 +115,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+If you don't already have it installed, please install the Node package manager globally.
 * npm
   ```sh
   npm install npm@latest -g
@@ -122,19 +123,15 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/ayayam/Cook_w_Friends.git
    ```
-3. Install NPM packages
+2. Install NPM package dependencies
    ```sh
-   npm install
+   npm install express ejs mongoose dotenv morgan 
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
