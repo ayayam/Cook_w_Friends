@@ -512,16 +512,16 @@ button.action:active {
     margin: auto;
 }
 
+.bio-text {
+    font-family: var(--unbounded);
+}
 .name {
-    font-family: 'Solitreo', cursive;
     font-size: 1.5em;
     align-self: flex-start;
     margin-top: 5px;
     margin-bottom: 0;
 }
-.bio {
-    font-family: 'Solitreo', cursive;
-}
+
 
 .profile-links {
     display: flex;
@@ -575,7 +575,7 @@ button.action:active {
 
 /* PROFILE_EDIT.HTML */
 .hidden-title-769 {
-    visibility: collapse;
+    display: none;
 } 
 .edit-profile-bio {
     display: flex;
@@ -587,7 +587,7 @@ button.action:active {
 .bio-edit {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 100%;
     margin-left: 10px;
 } 
 .edit-portrait {
@@ -609,9 +609,6 @@ button.action:active {
 @media screen and (max-width: 768px) {
     .hidden-title-769 {
         visibility: visible;
-    }
-    .hidden-title-768 {
-        display: none;
     }
     .profile-container {
         align-items: center;
