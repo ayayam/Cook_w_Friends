@@ -764,7 +764,7 @@ button.action:active {
 }
 
 .search-input {
-    height: 100%;
+    height: 30px;
     border-style: none;
 }
 .dropbtn {
@@ -830,9 +830,7 @@ a.search-result-link {
     padding: 1em;
     margin: 1%;
 }
-.search-result-link-top {
-    
-}
+
 .search-result-img {
     width: 150px;
     height: 200px;
