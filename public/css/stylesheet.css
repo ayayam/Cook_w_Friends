@@ -905,13 +905,12 @@ a.search-result-link {
     align-self: center;
     flex-wrap: wrap;
     width: 80%;
-    /* min-width: 300px; */
 }
 
 .shopping-list-category-head {
     align-self: flex-start;
     font-family: var(--rubik);
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: 600;
     text-decoration: underline;
     margin-bottom: 0;
@@ -923,19 +922,20 @@ a.search-result-link {
     flex-direction: column;
     justify-content: flex-start;
     width: 30%;
-    min-width: 165px;
+    min-width: 150px;
 }
 .shopping-list-category-list {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     font-family: var(--shadows);
-    font-size: 1.2em;
+    font-size: 1.15em;
     padding-left: 0;
+    margin-top: 1px;
 }
 .shopping-list-item {
     position: relative;
-    font-size: 1.2em;
+    font-size: 1.3em;
     line-height: 40px;
     width: 100%;
     font-family: var(--shadows);
