@@ -1,43 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Shadows+Into+Light&family=Solitreo&family=Unbounded:wght@200;300&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/838a2de27b.js" crossorigin="anonymous"></script>
-    <script defer src="/scripts.js"></script>
-    <title>Cook with Friends: Recipe Page</title>
-</head>
-
-<body>
-    <header class="header">
-        <a class="logo-container" href="home.html">
-            <img class="logo" src="/PP_imgs/LogoIcon.png" alt="Cook with Friends logo">
-            <p class="header-title-link header-title" href="home.html">Cook with Friends</p> 
-        </a>
-        
-        <nav class="navbar-user">
-            <a class="navlinks" href="profile.html">Profile</a>
-            <a class="navlinks" href="cookbook.html">Cookbook</a>
-            <a class="navlinks" href="friends.html">Friends</a>
-            <a class="navlinks" href="shopping_list.html">Shopping List</a>
-            <a class="navlinks" href="search.html">Search</a>
-        </nav>
-        <section class="hamburger-dropdown">
-            <a class="hamburger-menu" onclick="hamburgerDropdown()"><i class="fa-solid fa-bars"></i></a>
-            <div id="hamburgerDropdown" class="hamburger-dropdown-content">
-                <a class="hamburger-link" href="profile.html">Profile</a>
-                <a class="hamburger-link" href="cookbook.html">Cookbook</a>
-                <a class="hamburger-link" href="friends.html">Friends</a>
-                <a class="hamburger-link" href="shopping_list.html">Shopping List</a>
-                <a class="hamburger-link" href="search.html">Search</a>
-            </div> 
-        </section>
-    </header>
+<%- include('../partials/head') -%>
+<%- include('../partials/navbar(registered)') -%>
 
     <main class="recipe-container">
         <header class="recipe-header">
@@ -48,10 +10,10 @@
 
         <section class="recipe-album">
             <button class="add-photo"><i class="fa-solid fa-camera"></i>Add Photo</button>
-            <img class="recipe-album-img" src="/PP_imgs/lauren-gray-cinnamon-rolls.jpg" alt="">
-            <img class="recipe-album-img" src="/PP_imgs/lauren-gray-cinnamon-rolls.jpg" alt="">
-            <img class="recipe-album-img" src="/PP_imgs/otto-norin-cinnamon-buns.jpg" alt="">
-            <img class="recipe-album-img" src="/PP_imgs/pille-r-priske-brushed-cinnamon-rolls.jpg" alt="">
+            <img class="recipe-album-img" src="/image/lauren-gray-cinnamon-rolls.jpg" alt="">
+            <img class="recipe-album-img" src="/image/lauren-gray-cinnamon-rolls.jpg" alt="">
+            <img class="recipe-album-img" src="/image/otto-norin-cinnamon-buns.jpg" alt="">
+            <img class="recipe-album-img" src="/image/pille-r-priske-brushed-cinnamon-rolls.jpg" alt="">
         </section>
 
         <section class="ingredients-instructions">
@@ -141,7 +103,7 @@
                     </span>
                 </label>
             </section>
-                <a class="button" href=""><button class="green-button edit" type="submit">Add to shopping list</button></a>
+                <a class="button" href=""><button class="green-button edit" type="submit">Add to shop list</button></a>
             </form>
 
             <section class="instructions">
@@ -160,17 +122,4 @@
         </section>
     </main>
 
-    <footer class="footer-container">
-        <a class="footer-logo-container" href="home.html">
-            <img class="footer-logo"src="/PP_imgs/logo_orange.png" alt="Cook with Friends logo">
-        </a>
-        <section class="footer-nav">
-            <a class="footer-link" href="profile.html">Profile</a>
-            <a class="footer-link" href="cookbook.html">Cookbook</a>
-            <a class="footer-link" href="friends.html">Friends</a>
-            <a class="footer-link" href="shopping_list.html">Shopping List</a>
-            <a class="footer-link" href="search.html">Search</a>
-        </section>
-    </footer>
-</body>
-</html>
+    <%- include('../partials/footer(registered)') -%>
