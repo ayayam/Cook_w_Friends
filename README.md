@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ayayam/Cook_w_Friends.git">
-    <img src="/public/image/logo1.png" alt="Cook with Friends logo" width="150" height="150">
+    <img src="/public/image/Logo1.png" alt="Cook with Friends logo" width="150" height="150">
   </a>
 
 <h3 align="center">Cook with Friends</h3>
@@ -83,7 +83,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Homepage Screenshot][/public/image/homepage_screenshot.png]](https://github.com/ayayam/Cook_w_Friends/)
+[![Homepage Screenshot](/public/image/homepage_screenshot.png)](https://github.com/ayayam/Cook_w_Friends/)
 
 <!-- Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description` -->
 
