@@ -139,9 +139,25 @@ If you don't already have it installed, please install the Node package manager 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Login or register from the homepage.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+[![Homepage Screenshot](/public/image/homepage_screenshot.png)](https://github.com/ayayam/CodeSquad-Comics.git)
+
+Access your Cookbook, Friends, and Shop List, and search for recipes and friends.
+
+[![Profile Screenshot](/public/image/profile_screenshot.png)](https://github.com/ayayam/CodeSquad-Comics.git)
+
+All your recipes are alphabetically organized into clickable rows. Use the alphabet navbar or search bar to find just what you are looking for.
+
+[![Cookbook Screenshot](/public/image/cookbook_screenshot.png)](https://github.com/ayayam/CodeSquad-Comics.git)
+
+Your friends profile picture and name will be displayed in neat cards.
+
+[![Friends Screenshot](/public/image/friends_screenshot.png)](https://github.com/ayayam/CodeSquad-Comics.git)
+
+Add ingredients missing from your recipes straight to the your shop list. Make sure you check the box to cross it off the list!
+
+[![Homepage Screenshot](/public/image/shoplist_ss.png)](https://github.com/ayayam/CodeSquad-Comics.git)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
