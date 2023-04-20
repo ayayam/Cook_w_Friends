@@ -37,7 +37,7 @@
 <h3 align="center">Cook with Friends</h3>
 
   <p align="center">
-    Friends have the best recipes! Connect and make new friends over culinary tastes. Share recipes and cookbooks and your passion for food creation!
+    Friends have the best recipes! Connect and make new friends over shared culinary passions.
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
