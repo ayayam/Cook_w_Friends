@@ -10,7 +10,8 @@ function dropdown() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
 
-
+// Search: Drag and Drop elements
+// document.getElementByClass
   
   // function filterFunction() {
   //   var input, filter, ul, li, a, i;
