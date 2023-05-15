@@ -70,6 +70,12 @@ app.get('/recipe', (req, res) => {
     });
 });
 
+app.get('/new_recipe', (req, res) => {
+    res.render('pages/new_recipe', {
+        
+    })
+})
+
 app.get('/search', (req, res) => {
     res.render('pages/search', {
 
