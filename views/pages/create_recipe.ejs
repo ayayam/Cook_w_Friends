@@ -1,0 +1,40 @@
+<%- include('../partials/head') -%>
+<%- include('../partials/navbarRegistered') -%>
+
+<main class="recipe-container">
+    <header class="recipe-header">
+        <h1 class="recipe-title">Create a New Recipe</h1>
+    </header>
+    <form class="new-recipe-form">
+        <section class="new-recipe">
+            <label class="label" for="new-recipe-title">Enter Recipe Name:</label>
+            <input type="text" class="input" id="new-recipe-title">
+        </section>    
+
+        <section class="recipe-album new-recipe-album">
+            <!-- javascript loop -->
+            <button class="add-photo"><i class="fa-solid fa-camera"></i>Add Photo</button>
+            <img class="recipe-album-img" src="" alt="">
+        </section>
+
+        <section class="ingredients-instructions">
+            <section class="new-ingredients">
+                <label for="new-ingredients" class="ingredients-title label">Ingredients:</label>
+                <textarea id="new-ingredients" class="new-recipe-input"></textarea>
+            </section>
+
+            <section class="new-ingredients">
+                <label for="new-instructions" class="ingredients-title label">Instructions:</label>
+                <textarea id="new-instructions" type="textarea" class="new-recipe-input"></textarea>
+            </section>
+        </section>
+
+        <div class="centered-button-div">
+            <button type="submit" class="submit">Save Recipe</button>
+        </div>
+    </form>
+
+</main>
+
+
+<%- include('../partials/footerRegistered') -%>
