@@ -1,8 +1,9 @@
-const express = require("express");
-const morgan = require("morgan");
+const express = require('express');
+const morgan = require('morgan');
+const path = require('path');
 const app = express();
 const PORT = 3000;
-const path = require("path");
+
 
 app.set('view engine', 'ejs');
 
