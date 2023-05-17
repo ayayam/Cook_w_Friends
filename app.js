@@ -10,29 +10,29 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(morgan('combined'));
 
-app.get('/', (req, res) => {
-    res.render('pages/home', {
+// app.get('/', (req, res) => {
+//     res.render('pages/home', {
 
-    });
-});
+//     });
+// });
 
-app.get('/register', (req, res) => {
-    res.render('pages/register', {
+// app.get('/register', (req, res) => {
+//     res.render('pages/register', {
 
-    });
-});
+//     });
+// });
 
-app.get('/contact_us', (req, res) => {
-    res.render('pages/contact_us', {
+// app.get('/contact_us', (req, res) => {
+//     res.render('pages/contact_us', {
 
-    });
-});
+//     });
+// });
 
-app.get('/login', (req, res) => {
-    res.render('pages/login', {
+// app.get('/login', (req, res) => {
+//     res.render('pages/login', {
 
-    });
-});
+//     });
+// });
 
 app.get('/cookbook', (req, res) => {
     res.render('pages/cookbook', {
@@ -70,8 +70,13 @@ app.get('/recipe', (req, res) => {
     });
 });
 
-app.get('/new_recipe', (req, res) => {
-    res.render('pages/new_recipe', {
+app.get('/create_recipe', (req, res) => {
+    res.render('pages/create_recipe', {
+        
+    })
+})
+app.get('/update_recipe', (req, res) => {
+    res.render('pages/update_recipe', {
         
     })
 })
@@ -87,6 +92,9 @@ app.get('/shopping_list', (req, res) => {
 
     });
 });
+
+const indexRoutes = require('./routes/index-routes');
+app.use('/', indexRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is listening on PORT ${PORT}`);
