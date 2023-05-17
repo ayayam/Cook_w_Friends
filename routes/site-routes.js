@@ -1,6 +1,6 @@
 const express = require('express');
-const router = express.Router()
 const siteController = require('../controllers/site-controller');
+const router = express.Router()
 
 router.route('/')
     .get(siteController.home)
@@ -17,5 +17,9 @@ router.route('/contact_us')
 router.route('/register')
     .get(siteController.register_get)
     .post(siteController.register_post)
+
+router.route('/search')
+    .get(siteController.search_get)
+    .post(siteController.search_post)
 
 module.exports = router;

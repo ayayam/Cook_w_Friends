@@ -31,6 +31,14 @@ module.exports = {
     },
 
     register_post: (req, res) => {
+
+    },
+
+    search_get: (req, res) => {
+
+    },
+
+    search_post: (req, res) => {
         
     }
 }
