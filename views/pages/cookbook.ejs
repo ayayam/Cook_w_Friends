@@ -10,7 +10,7 @@
                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </div>
-        <nav class="alphabet-nav">
+        <nav class="alphabet-nav" id="alphabet-nav">
             <a class="alphabet-link" href="#">A</a>
             <a class="alphabet-link" href="#">B</a>
             <a class="alphabet-link" href="#">C</a>
@@ -38,9 +38,10 @@
             <a class="alphabet-link" href="#">Y</a>
             <a class="alphabet-link" href="#">Z</a>
         </nav>
-    <div class="max786-recipe-list">
-        <section class="recipe-list">
-            <button class="green-button edit add-cookbook" type="submit" onclick="">Add New Recipe</button>
+    <div class="max786-recipe-list" id="recipe-list">
+        <section class="recipe-list" id="recipe-list">
+            <a class="green-button edit add-cookbook" href="views/pages/create_recipe">Add New Recipe</a>
+            <!-- <input type="button" class="green-button edit add-cookbook" type="submit" href="/create_recipe" onclick="" value="Add New Recipe"></input> -->
             <figure class="recipe-row">
                 <a class="recipe-link" href="/recipe">
                 <img class="recipe-img" src="/image/lauren-gray-cinnamon-rolls.jpg" alt=""></a>

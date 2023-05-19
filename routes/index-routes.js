@@ -2,8 +2,8 @@ const express = require('express');
 const siteRoutes = require('./site-routes');
 const cookbookRoutes = require('./cookbook-routes');
 const friendsRoutes = require('./friends-routes');
-const profileRoutes = require('/profile-routes');
-const shoppingListRoutes = require('/shopping-list-routes');
+const profileRoutes = require('./profile-routes');
+const shoppingListRoutes = require('./shopping-list-routes');
 const router = express.Router();
 
 router.use('/', siteRoutes);

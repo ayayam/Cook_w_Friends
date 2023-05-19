@@ -3,7 +3,7 @@ const siteController = require('../controllers/site-controller');
 const router = express.Router()
 
 router.route('/')
-    .get(siteController.home)
+    .get(siteController.home) 
 
 router.route('/login')
     .get(siteController.login_get)
@@ -12,7 +12,7 @@ router.route('/login')
 
 router.route('/contact_us')
     .get(siteController.contact_us_get)
-    .post(siteController.contact_us_post)
+    .post(siteController.contact_us_post) //?
 
 router.route('/register')
     .get(siteController.register_get)
@@ -20,6 +20,6 @@ router.route('/register')
 
 router.route('/search')
     .get(siteController.search_get)
-    .post(siteController.search_post)
+    .post(siteController.search_post) //?
 
 module.exports = router;

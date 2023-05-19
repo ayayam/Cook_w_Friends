@@ -134,6 +134,10 @@ button.action:active {
     color: var(--green);
 }
 
+.inactive {
+    color: grey;
+    cursor: default;
+}
 
 
 /* HEADER */

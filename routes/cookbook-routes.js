@@ -2,18 +2,14 @@ const express = require('express');
 const cookbookController = require('../controllers/cookbook-controllers');
 const router = express.Router();
 
-router.route('/cookbook')
+router.route('/')
     .get(cookbookController.cookbook_get)
-
-router.route('/cookbook/recipe')
-    .get(cookbookController.recipe_get)
-    .delete(cookbookController.recipe_delete)
-
-router.route('/cookbook/create-recipe')
     .post(cookbookController.create_recipe_post)
 
-router.route('/cookbook/update_recipe')
+router.route('/:id')
+    .get(cookbookController.recipe_get)
     .put(cookbookController.update_recipe_put)
+    .delete(cookbookController.recipe_delete)
 
 
 
