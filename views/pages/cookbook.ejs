@@ -42,11 +42,22 @@
         <section class="recipe-list" id="recipe-list">
             <a class="green-button edit add-cookbook" href="views/pages/create_recipe">Add New Recipe</a>
             <!-- <input type="button" class="green-button edit add-cookbook" type="submit" href="/create_recipe" onclick="" value="Add New Recipe"></input> -->
+            <% /* %>
+            <% for (recipe of recipes) { %>
+                <figure class="recipe-row">
+                    <a class="recipe-link" href="./user/:id/cookbook/<%= recipe._id%>">
+                        <img class="recipe-img" src="" alt="<%= recipe.recipeName %>">
+                    </a>
+                        <figcaption class="recipe-figcaption"><a class="recipe-link" href="./user/:id/cookbook/<%= recipe._id%>"><%= recipe.recipeName</a></figcaption>
+                </figure>
+            <% } %><% */ %>
+
             <figure class="recipe-row">
                 <a class="recipe-link" href="/recipe">
                 <img class="recipe-img" src="/image/lauren-gray-cinnamon-rolls.jpg" alt=""></a>
                 <figcaption class="recipe-figcaption"><a class="recipe-link" href="recipe.html">Cinnamon Rolls</a></figcaption>
             </figure>
+
             <figure class="recipe-row">
                 <a class="recipe-link" href="#">
                 <img class="recipe-img" src="/image/pappardelle.jpg" alt=""></a>
