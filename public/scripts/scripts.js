@@ -29,3 +29,13 @@ function dropdown() {
   //   }
   // } 
 
+function addCheckedItem() { //make result an array
+  let checkboxes = document.getElementsByClass('ingredient-item');
+  let result = [];
+  for (let i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+      result.push(checkboxes[i].value)
+    }
+  }
+} // make a form  button that makes a post request
+// value could be replaced with id

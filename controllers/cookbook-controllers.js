@@ -2,7 +2,15 @@
 
 module.exports = {
     cookbook_get: (req, res) => {
-        res.render('pages/cookbook');
+        Recipes.find({})
+        .then((recipes) => {
+            res.render('pages/index', {
+                recipes: recipes
+            });
+        })
+        .catch((err) => {
+            console.log(err);
+        })
     },
 
     recipe_get: (req, res) => {
@@ -30,7 +38,7 @@ module.exports = {
     },
 
     create_recipe_post: (req, res) => {
-        const {} = req.body;
+        const { recipeName, images, ingredients, instructions } = req.body;
         const newRecipe = new Recipes ({
             recipeName: recipeName,
             images: images,
