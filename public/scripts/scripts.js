@@ -34,7 +34,8 @@ function addCheckedItem() { //make result an array
   let result = [];
   for (let i = 0; i < checkboxes.length; i++) {
     if (checkboxes[i].checked) {
-      result.push(checkboxes[i].value)
+      result.push(checkboxes[i].value);
+      // db.recipes.insertMany(result)?
     }
   }
 } // make a form  button that makes a post request

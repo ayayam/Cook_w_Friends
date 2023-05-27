@@ -1,10 +1,11 @@
 //Recipe model schema still needs to be created
+const Recipes = require('../models/recipe-model')
 
 module.exports = {
     cookbook_get: (req, res) => {
         Recipes.find({})
-        .then((recipes) => {
-            res.render('pages/index', {
+        .then(recipes => {
+            res.render('pages/cookbook', {
                 recipes: recipes
             });
         })
@@ -35,6 +36,10 @@ module.exports = {
             .catch(err => {
                 console.log(err)
             })
+    },
+
+    create_recipe_get: (req, res) => {
+        res.render('pages/create_recipe');
     },
 
     create_recipe_post: (req, res) => {

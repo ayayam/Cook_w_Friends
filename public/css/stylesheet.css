@@ -76,6 +76,9 @@ h1 {
     border-style: none;
 }
 
+.peach-color {
+    color: var(--peach);
+}
 .green-button {
     background-color: var(--green);
     color: var(--peach);

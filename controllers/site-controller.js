@@ -32,7 +32,7 @@ module.exports = {
     },
 
     contact_us_post: (req, res) => {
-
+        
     },
 
     register_get: (req, res) => {

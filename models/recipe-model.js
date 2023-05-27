@@ -11,12 +11,12 @@ const recipeSchema = new Schema({
         type: String,
     },
     ingredients: {
-        type: String,
+        type: Array,
         required: [true, "Please enter some ingredients"],
         minlength: [1, "Please enter at least 1 character"]
     },
     instructions: {
-        type: String,
+        type: Array,
         required: [true, "Please enter instructions"],
         minlength: [1, "Please enter at least 1 character"]
     }
@@ -28,7 +28,7 @@ async function runRecipes() {
     await mongoose.connect(`${process.env.DB_URL}`)
     mongoose.model('recipes', recipeSchema)
     await mongoose.model('recipes').find();
-    //insert
+    // await mongoose.model('recipes').findOne();
 }
 runRecipes();
 
