@@ -53,7 +53,7 @@ module.exports = {
 
         newRecipe.save();
 
-        res.redirect('/:id')
+        res.redirect('/user/:id/cookbook')
     },
 
     update_recipe_put: (req, res) => {

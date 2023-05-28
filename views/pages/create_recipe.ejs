@@ -5,10 +5,10 @@
     <header class="recipe-header">
         <h1 class="recipe-title">Create a New Recipe</h1>
     </header>
-    <form class="new-recipe-form">
+    <form class="new-recipe-form" action="/user/:id/cookbook/" method="POST">
         <section class="new-recipe">
             <label class="label" for="new-recipe-title">Enter Recipe Name:</label>
-            <input type="text" class="input" id="new-recipe-title">
+            <input type="text" class="input" id="new-recipe-title" minlength=1 required>
         </section>    
 
         <section class="recipe-album new-recipe-album">
@@ -19,13 +19,13 @@
 
         <section class="ingredients-instructions">
             <section class="new-ingredients">
-                <label for="new-ingredients" class="ingredients-title label">Ingredients:</label>
-                <textarea id="new-ingredients" class="new-recipe-input"></textarea>
+                <label for="new-ingredients" class="ingredients-title label">Enter Ingredients:</label>
+                <textarea id="new-ingredients" class="new-recipe-input" minlength=1 required></textarea>
             </section>
 
             <section class="new-ingredients">
-                <label for="new-instructions" class="ingredients-title label">Instructions:</label>
-                <textarea id="new-instructions" type="textarea" class="new-recipe-input"></textarea>
+                <label for="new-instructions" class="ingredients-title label">Enter Instructions:</label>
+                <textarea id="new-instructions" type="textarea" class="new-recipe-input" minlength=1 required></textarea>
             </section>
         </section>
 
