@@ -1,8 +1,7 @@
 // Shopping list model schema TBC
 
 module.exports = {
-    shopping_list_get: (req, res) => { // do i need a shopping-list model?
-
+    shopping_list_get: (req, res) => { 
         res.render('pages/shopping_list')
     },
 
