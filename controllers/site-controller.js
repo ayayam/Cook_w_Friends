@@ -1,4 +1,5 @@
-//User model schema still needs to be created
+const User = require('../models/user-model');
+const passport = require('passport');
 
 module.exports = {
     home: (req, res) => {
@@ -21,7 +22,7 @@ module.exports = {
                 res.redirect('/login');
             } else {
                 passport.authenticate('local')(req, res, () => {
-                    res.redirect('/user/:id/profile')
+                    res.redirect('/user/_:id/profile')
                 }) 
             }
         })
@@ -40,14 +41,13 @@ module.exports = {
     },
 
     register_post: (req, res) => {
-        const {username, password} = req.body;
-        User.register({username: username}, password, (err, user) => {
+        User.register({username: req.body.username}, req.body.password, (err, user) => {
             if (err) {
                 console.log(err);
                 res.redirect('/register');
             } else {
                 passport.authenticate('local')(req, res, () => {
-                    res.redirect('/user/:id/profile/profile_edit')
+                    res.redirect('/user/_:id/profile/')
                 })
             }
         })
@@ -59,5 +59,21 @@ module.exports = {
 
     search_post: (req, res) => {
         
+    },
+
+    google_get: passport.authenticate('google', { scope: ['openid', 'profile', 'email']}),
+
+    google_redirect_get: [
+        passport.authenticate('google', {failureRedirect: '/login'}), function(req, res) {
+            res.redirect('/user/_:id/profile');
+            alert("You are logged in");
+        }
+    ],
+
+    logout: (req, res) => {
+        req.logout(function(err) {
+            if (err) {return next(err);}
+            res.redirect('/');
+        })
     }
 }
