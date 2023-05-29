@@ -53,7 +53,20 @@ module.exports = {
 
         newRecipe.save();
 
-        res.redirect('/user/:id/cookbook')
+        res.redirect('/user/_:id/cookbook/')
+    },
+
+    update_recipe_get: (req, res) => {
+        const { _id } = req.params;
+        Recipes.findOne({_id: _id})
+            .then(recipe => {
+                res.render('pages/update_recipe', {
+                    recipe: recipe
+                })
+            })
+            .catch(err => {
+                console.log(err);
+            });
     },
 
     update_recipe_put: (req, res) => {

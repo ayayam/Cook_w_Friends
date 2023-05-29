@@ -6,6 +6,9 @@ router.route('/')
     .get(profileController.profile_get)
     .put(profileController.profile_edit_put)
 
+router.route('/profile-edit/:_id')
+    .get(profileController.profile_edit_get)
+
     
 
 module.exports = router;

@@ -6,6 +6,18 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const mongooseFindOrCreate = require('mongoose-findorcreate');
 
 const userSchema = new Schema ({
+    firstName: {
+        type: String,
+    },
+    lastName: {
+        type: String,
+    },
+    bio: {
+        type: String,
+    },
+    avatar: {
+        type: String,
+    },
     username: {
         type: String,
     },
@@ -14,6 +26,12 @@ const userSchema = new Schema ({
     },
     googleId: {
         type: String,
+    },
+    shoppingList: {
+        type: Array,
+    },
+    friendsList: {
+        type: Array,
     }
 });
 

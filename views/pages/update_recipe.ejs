@@ -5,10 +5,10 @@
     <header class="recipe-header">
         <h1 class="recipe-title">Create a New Recipe</h1>
     </header>
-    <form class="new-recipe-form">
+    <form class="new-recipe-form" action="/user/_:id/cookbook/<%= recipe._:id %>?_method=PUT" method="POST">
         <section class="new-recipe">
             <label class="label" for="new-recipe-title">Enter Recipe Name:</label>
-            <input type="text" class="input" id="new-recipe-title">
+            <input type="text" class="input" id="new-recipe-title" value="<%= recipe.recipeName %>">
         </section>    
 
         <section class="recipe-album new-recipe-album">
@@ -20,12 +20,12 @@
         <section class="ingredients-instructions">
             <section class="new-ingredients">
                 <label for="new-ingredients" class="ingredients-title label">Ingredients:</label>
-                <textarea id="new-ingredients" class="new-recipe-input"></textarea>
+                <textarea id="new-ingredients" class="new-recipe-input" value="<%= recipe.ingredients %>"></textarea>
             </section>
 
             <section class="new-ingredients">
                 <label for="new-instructions" class="ingredients-title label">Instructions:</label>
-                <textarea id="new-instructions" type="textarea" class="new-recipe-input"></textarea>
+                <textarea id="new-instructions" type="textarea" class="new-recipe-input" value="<%= recipe.instructions %>"></textarea>
             </section>
         </section>
 

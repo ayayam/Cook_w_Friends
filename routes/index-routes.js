@@ -7,9 +7,9 @@ const shoppingListRoutes = require('./shopping-list-routes');
 const router = express.Router();
 
 router.use('/', siteRoutes);
-router.use('/user/:id/cookbook', cookbookRoutes);
-router.use('/user/:id/friends', friendsRoutes);
-router.use('/user/:id/profile', profileRoutes);
-router.use('/user/:id/shopping-list', shoppingListRoutes);
+router.use('/user/:_id/cookbook', cookbookRoutes);
+router.use('/user/:_id/friends', friendsRoutes);
+router.use('/user/:_id/profile', profileRoutes);
+router.use('/user/:_id/shopping-list', shoppingListRoutes);
 
 module.exports = router;

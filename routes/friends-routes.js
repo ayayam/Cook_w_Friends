@@ -5,7 +5,7 @@ const router = express.Router();
 router.route('/')
     .get(friendsController.friends_get)
 
-router.route('/friend_profile/:id')
+router.route('/friend_profile/_:id')
     .get(friendsController.friend_profile_get) //?
 
 module.exports = router;

@@ -9,7 +9,10 @@ router.route('/')
 router.route('/create-recipe')
     .get(cookbookController.create_recipe_get)
 
-router.route('/:id')
+router.route('update-book/_:id')
+    .get(cookbookController.update_recipe_get)
+
+router.route('/_:id')
     .get(cookbookController.recipe_get)
     .put(cookbookController.update_recipe_put)
     .delete(cookbookController.recipe_delete)
