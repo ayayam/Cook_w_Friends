@@ -48,9 +48,9 @@ module.exports = {
             } else {
                 passport.authenticate('local')(req, res, () => {
                     res.redirect('/user/_:id/profile/')
-                })
+                });
             }
-        })
+        });
     },
 
     search_get: (req, res) => {
