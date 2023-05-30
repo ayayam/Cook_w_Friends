@@ -221,7 +221,9 @@ button.action:active {
     color: var(--green);
 }
 
-
+.current {
+    color: var(--green);
+}
 
 @media only screen and (max-width: 768px) { 
     .navlinks {

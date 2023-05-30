@@ -21,6 +21,9 @@ const userSchema = new Schema ({
     username: {
         type: String,
     },
+    email: {
+        type: String,
+    },
     password: {
         type: String,
     },
@@ -32,15 +35,18 @@ const userSchema = new Schema ({
     },
     friendsList: {
         type: Array,
+    },
+    recipesList: {
+        type: Array,
     }
 });
 
 userSchema.plugin(passportLocalMongoose);
 userSchema.plugin(mongooseFindOrCreate);
 
-const User = mongoose.model('Users', userSchema);
+const Users = mongoose.model('Users', userSchema);
 
-passport.use(User.createStrategy());
+passport.use(Users.createStrategy());
 
 async function runUsers() {
     await mongoose.connect(`${process.env.DB_URL}`)
@@ -50,7 +56,7 @@ async function runUsers() {
 runUsers();
 
 passport.serializeUser(function(user, cb) {
-    process.nextTick(function() {
+    process.nextTick(function() { // 
         cb(null, { id: user.id, username: user.username, name: user.displayName });
     });
 });
@@ -67,9 +73,9 @@ passport.use(new GoogleStrategy({
     callbackURL: "http://localhost:3000/auth/google/admin"
 },
 function(accessToken, refreshToken, email, cb) {
-    User.findOrCreate({ googleId: email.id}, function(err, user) {
+    Users.findOrCreate({ googleId: email.id}, function(err, user) {
         return cb(err, user);
     });
 }));
 
-module.exports = User;
+module.exports = Users;

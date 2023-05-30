@@ -1,10 +1,19 @@
 // Profile model schema to be created
 
-const User = require("../models/recipe-model");
+const Users = require("../models/recipe-model");
 
 module.exports = {
     profile_get: (req, res) => {
-        res.render('pages/profile');
+        const {_id} = req.params;
+        Users.findOne({_id: _id})
+        .then((user) => {
+            res.render('pages/profile', {
+                user: user
+            });
+        })
+        .catch((err) => {
+            console.log(err);
+        })
     },
 
     profile_edit_put: (req, res) => {
@@ -26,7 +35,7 @@ module.exports = {
 
     profile_edit_get: (req, res) => {
         const { _id } = req.params;
-        User.findOne({_id: _id})
+        Users.findOne({_id: _id})
             .then(user => {
                 res.render('pages/profile_edit', {
                     user: user

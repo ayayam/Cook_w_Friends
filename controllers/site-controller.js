@@ -1,4 +1,4 @@
-const User = require('../models/user-model');
+const Users = require('../models/user-model');
 const passport = require('passport');
 
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
 
     login_post: (req, res) => {
         const {username, password} = req.body;
-        const user = new User({
+        const user = new Users({
             username: username,
             password: password
         });
@@ -41,7 +41,7 @@ module.exports = {
     },
 
     register_post: (req, res) => {
-        User.register({username: req.body.username}, req.body.password, (err, user) => {
+        Users.register({username: req.body.username}, req.body.password, (err, user) => {
             if (err) {
                 console.log(err);
                 res.redirect('/register');

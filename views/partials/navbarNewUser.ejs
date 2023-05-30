@@ -1,3 +1,4 @@
+<body>
 <header class="header">
     <a class="logo-container" href="/">
         <img class="logo" src="/image/LogoIcon.png" alt="Cook with Friends logo">
@@ -5,9 +6,9 @@
     </a>
     
     <nav class="navbar-new">
-        <a class="navlinks"href="/register">New Users</a>
-        <a class="navlinks login-navlink" href="/login">Login</a>
-        <a class="navlinks" href="/contact_us">Contact Us</a>
+        <a class="navlinks" data-pathname="/register" href="/register">New Users</a>
+        <a class="navlinks login-navlink" data-pathname="/login" href="/login">Login</a>
+        <a class="navlinks" data-pathname="/contact_us.ejs" href="/contact_us">Contact Us</a>
     </nav>
 
     <section class="hamburger-dropdown">
