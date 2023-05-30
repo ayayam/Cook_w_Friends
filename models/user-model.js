@@ -12,33 +12,37 @@ const userSchema = new Schema ({
     lastName: {
         type: String,
     },
-    bio: {
-        type: String,
-    },
-    avatar: {
-        type: String,
-    },
+    // bio: {
+    //     type: String,
+    // },
+    // avatar: {
+    //     type: String,
+    // },
     username: {
         type: String,
+        required: true,
     },
     email: {
         type: String,
+        required: true,
+        unique: true
     },
     password: {
         type: String,
+        required: true,
     },
     googleId: {
         type: String,
     },
-    shoppingList: {
-        type: Array,
-    },
-    friendsList: {
-        type: Array,
-    },
-    recipesList: {
-        type: Array,
-    }
+    // shoppingList: {
+    //     type: Array,
+    // },
+    // friendsList: {
+    //     type: Array,
+    // },
+    // recipesList: {
+    //     type: Array,
+    // }
 });
 
 userSchema.plugin(passportLocalMongoose);
@@ -56,7 +60,7 @@ async function runUsers() {
 runUsers();
 
 passport.serializeUser(function(user, cb) {
-    process.nextTick(function() { // 
+    process.nextTick(function() { //
         cb(null, { id: user.id, username: user.username, name: user.displayName });
     });
 });
