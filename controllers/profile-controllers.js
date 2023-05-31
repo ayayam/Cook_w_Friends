@@ -1,6 +1,6 @@
 // Profile model schema to be created
 
-const Users = require("../models/recipe-model");
+const Users = require("../models/user-model");
 
 module.exports = {
     profile_get: (req, res) => {

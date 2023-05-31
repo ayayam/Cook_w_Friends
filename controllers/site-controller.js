@@ -43,82 +43,34 @@ module.exports = {
     res.render("pages/register", {});
   },
 
-//   register_post: (req, res) => {
-//     const { firstName, lastName, username, email, password, googleId } = req.body;
-//     const newUser = new Users({
-//       firstName: firstName,
-//       lastName: lastName,
-//       username: username,
-//       email: email,
-//       password: password,
-//     //   bio: bio,
-//     //   avatar: avatar,
-//       googleId: googleId,
-//     //   shoppingList: shoppingList,
-//     //   friendsList: friendsList,
-//     //   recipesList: recipesList,
-//     });
-//     console.log(newUser);
-//     Users.register(newUser, (err) => {
-//       if (err) {
-//         console.log(err);
-//         res.redirect("/register");
-//       } else {
-//         passport.authenticate("local")(req, res, () => {
-//           res.redirect("/user/_:id/profile/");
-//         });
-//       }
-//     });
-//   },
-  // register_post: (req, res) => {
-  //   Users.findOne({ email: req.body.email })
-  //       .then((user) => {
-  //           if (user) {
-  //               res.redirect('/register')
-  //           } else {
-  //               const newUser = new Users({
-  //                   firstName: req.body.firstName,
-  //                   lastName: req.body.lastName,
-  //                   username: req.body.username,
-  //                   email: req.body.email,
-  //                   password: req.body.password
-  //               });
-  //               newUser.save()
-  //               res.redirect('/user/_:id/profile/')
-  //           }
-  //   });
-  // },
+
   register_post: (req, res) => {
-    Users.register({username: req.body.username}, req.body.password, (err, user) => {
-        if (err) {
-            console.log(err);
-            res.redirect('/register');
-        } else {
-            passport.authenticate('local')(req, res, () => {
-                res.redirect('/user/_:id/profile')
-            });
-        }
-    });    
+    Users.register({firstName: req.body.firstName, lastName: req.body.lastName, username: req.body.username, email: req.body.email}, req.body.password, (err, user) => {
+      if (err) {
+        console.log(err);
+        res.redirect('/register');
+      } else {
+        passport.authenticate('local')(req, res, () => {
+          res.redirect('/user/_:id/profile')
+        });
+      }
+    });
   },
 
-//   register_post: (req, res) => {
-//     const newUser = new Users({
-//         firstName: req.body.firstName,
-//         lastName: req.body.lastName,
-//         username: req.body.username,
-//         email: req.body.email,
-//     });
-    // Users.register(newUser, req.body.password, (err, user) => {
-    //     if (err) {
-    //         console.log(err);
-    //         res.redirect('/register')
-    //     } else {
-    //         passport.authenticate('local')(req, res, () => {
-    //             res.redirect('/user/_:id/profile/')
-    //         })
-    //     }
-    // })
-//   },
+  // THIS ONE WORKS WITH JUST USERNAME AND PASSWORD
+  // register_post: (req, res) => {
+  //   Users.register({username: req.body.username}, req.body.password, (err, user) => {
+  //       if (err) {
+  //           console.log(err);
+  //           res.redirect('/register');
+  //       } else {
+  //           passport.authenticate('local')(req, res, () => {
+  //               res.redirect('/user/_:id/profile')
+  //           });
+  //       }
+  //   });    
+  // },
+
 
   search_get: (req, res) => {
     res.render("pages/search");
