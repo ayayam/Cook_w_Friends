@@ -1,4 +1,3 @@
-// Profile model schema to be created
 
 const Users = require("../models/user-model");
 
@@ -6,9 +5,9 @@ module.exports = {
     profile_get: (req, res) => {
         const {_id} = req.params;
         Users.findOne({_id: _id})
-        .then((user) => {
+        .then((users) => {
             res.render('pages/profile', {
-                user: user
+                users: users
             });
         })
         .catch((err) => {
@@ -18,15 +17,15 @@ module.exports = {
 
     profile_edit_put: (req, res) => {
         const {_id} = req.params;
-        const {picture, name, nickname, bio} = req.body;
-        Profiles.findByIdAndUpdate(_id, {$set: {
-            picture: picture,
-            name: name,
-            nickname: nickname,
+        const {avatar, firstName, lastName, bio} = req.body;
+        Users.findByIdAndUpdate(_id, {$set: {
+            avatar: avatar,
+            firstName: firstName,
+            lastName: lastName,
             bio: bio
         }}, {new: true})
         .then(() => {
-            res.redirect('/')
+            res.redirect('pages/profile')
         })
         .catch((err) => {
             console.log(err)

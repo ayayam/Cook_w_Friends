@@ -51,7 +51,7 @@ module.exports = {
         res.redirect('/register');
       } else {
         passport.authenticate('local')(req, res, () => {
-          res.redirect('/user/_:id/profile')
+          res.redirect('/user/_:id/profile/')
         });
       }
     });

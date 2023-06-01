@@ -5,27 +5,28 @@
     <header class="recipe-header">
         <h1 class="recipe-title">Create a New Recipe</h1>
     </header>
+
     <form class="new-recipe-form" action="/user/_:id/cookbook/" method="POST">
         <section class="new-recipe">
-            <label class="label" for="new-recipe-title">Enter Recipe Name:</label>
-            <input type="text" class="input" id="new-recipe-title" minlength=1 required>
+            <label class="label" for="recipeName">Enter Recipe Name:</label>
+            <input type="text" class="input" id="recipeName" name="recipeName" placeholder="Recipe Name" minlength="1" required>
         </section>    
+<!-- took out minlength and require temporarily-->
+        <!-- <section class="recipe-album new-recipe-album">
 
-        <section class="recipe-album new-recipe-album">
-            <!-- javascript loop -->
             <button class="add-photo"><i class="fa-solid fa-camera"></i>Add Photo</button>
             <img class="recipe-album-img" src="" alt="">
-        </section>
+        </section> -->
 
         <section class="ingredients-instructions">
             <section class="new-ingredients">
-                <label for="new-ingredients" class="ingredients-title label">Enter Ingredients:</label>
-                <textarea id="new-ingredients" class="new-recipe-input" minlength=1 required></textarea>
+                <label for="ingredients" class="ingredients-title label">Enter Ingredients:</label>
+                <textarea id="ingredients" class="new-recipe-input" name="ingredients" placeholder="Ingredients" minlength="1" required></textarea>
             </section>
 
             <section class="new-ingredients">
-                <label for="new-instructions" class="ingredients-title label">Enter Instructions:</label>
-                <textarea id="new-instructions" type="textarea" class="new-recipe-input" minlength=1 required></textarea>
+                <label for="instructions" class="ingredients-title label">Enter Instructions:</label>
+                <textarea id="instructions" class="new-recipe-input" name="instructions" placeholder="Instructions" minlength="1" required></textarea>
             </section>
         </section>
 

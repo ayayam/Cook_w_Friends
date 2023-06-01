@@ -46,7 +46,7 @@ module.exports = {
         const { recipeName, images, ingredients, instructions } = req.body;
         const newRecipe = new Recipes ({
             recipeName: recipeName,
-            images: images,
+            // images: images,
             ingredients: ingredients,
             instructions: instructions
         })

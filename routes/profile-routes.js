@@ -6,7 +6,7 @@ router.route('/')
     .get(profileController.profile_get)
     .put(profileController.profile_edit_put)
 
-router.route('/profile-edit/:_id')
+router.route('/profile-edit')
     .get(profileController.profile_edit_get)
 
     

@@ -31,15 +31,15 @@ const userSchema = new Schema ({
     googleId: {
         type: String,
     },
-    // shoppingList: {
-    //     type: Array,
-    // },
-    // friendsList: {
-    //     type: Array,
-    // },
-    // recipesList: {
-    //     type: Array,
-    // }
+    shoppingList: {
+        type: Array,
+    },
+    friendsList: {
+        type: Array,
+    },
+    recipesList: {
+        type: Array,
+    }
 });
 
 userSchema.plugin(passportLocalMongoose);
