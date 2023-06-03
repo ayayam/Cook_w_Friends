@@ -12,7 +12,7 @@ router.route('/login')
 
 router.route('/contact_us')
     .get(siteController.contact_us_get)
-    .post(siteController.contact_us_post) //?
+    .post(siteController.contact_us_post) 
 
 router.route('/register')
     .get(siteController.register_get)

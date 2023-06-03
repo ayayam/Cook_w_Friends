@@ -9,14 +9,14 @@ function dropdown() {
 }
 
 // highlighting current page
-var link = document.getElementsByClassName("navlinks");
-var URL = window.location.pathname;
-URL = URL.substring(URL.lastIndexOf('/'));
-for (var i = 0; i < links.length; i++) {
-  if (links[i].dataset.pathname == URL) {
-    links[i].classList.add("current");
-  }
-}
+// var link = document.getElementsByClassName("navlinks");
+// var URL = window.location.pathname;
+// URL = URL.substring(URL.lastIndexOf('/'));
+// for (var i = 0; i < links.length; i++) {
+//   if (links[i].dataset.pathname == URL) {
+//     links[i].classList.add("current");
+//   }
+// }
 
 // let links = document.querySelectorAll(".navbar-new a");
 // let bodyId = document.querySelector("body").id;

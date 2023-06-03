@@ -40,17 +40,18 @@
         </nav>
     <div class="max786-recipe-list" id="recipe-list">
         <section class="recipe-list" id="recipe-list">
-            <a class="green-button edit add-cookbook" href="/user/:_id/cookbook/create-recipe">Add New Recipe</a>
+            <a class="green-button edit add-cookbook" href="/user/cookbook/create-recipe">Add New Recipe</a>
 
-            <% /* %>
+            <!-- <% /* %> -->
             <% for (recipe of recipes) { %>
                 <figure class="recipe-row">
-                    <a class="recipe-link" href="./user/_:id/cookbook/<%= recipe._id%>">
+                    <a class="recipe-link" href="./user/cookbook/<%= recipe._id%>">
                         <img class="recipe-img" src="" alt="<%= recipe.recipeName %>">
                     </a>
-                        <figcaption class="recipe-figcaption"><a class="recipe-link" href="./user/_:id/cookbook/<%= recipe._id%>"><%= recipe.recipeName =%></a></figcaption>
+                        <figcaption class="recipe-figcaption"><a class="recipe-link" href="./user/cookbook/<%= recipe._id%>"><%= recipe.recipeName =%></a></figcaption>
                 </figure>
-            <% } %><% */ %>
+            <% } %>
+            <!-- <% */ %> -->
 
             <figure class="recipe-row">
                 <a class="recipe-link" href="./_:id">

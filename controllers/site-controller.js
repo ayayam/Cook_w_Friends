@@ -3,11 +3,11 @@ const passport = require("passport");
 
 module.exports = {
   home: (req, res) => {
-    res.render("pages/home", {});
+    res.render('pages/home', {});
   },
 
   login_get: (req, res) => {
-    res.render("pages/login", {});
+    res.render('pages/login', {});
   },
 
   login_post: (req, res) => {
@@ -19,10 +19,11 @@ module.exports = {
     req.login(user, (err) => {
       if (err) {
         console.log(err);
-        res.redirect("/login");
+        res.redirect('/login');
       } else {
         passport.authenticate('local')(req, res, () => {
-            res.redirect('/user/_:id/profile');
+          const user = req.user;
+            res.render('pages/profile', { users: user });
         });
         // passport.authenticate("local")(req, res, () => {
         //   Users.find({ username: username }).then((user) => {
@@ -34,18 +35,18 @@ module.exports = {
   },
 
   contact_us_get: (req, res) => {
-    res.render("pages/contact_us", {});
+    res.render('pages/contact_us', {});
   },
 
   contact_us_post: (req, res) => {},
 
   register_get: (req, res) => {
-    res.render("pages/register", {});
+    res.render(pages/register, {});
   },
 
 
   register_post: (req, res) => {
-    Users.register({firstName: req.body.firstName, lastName: req.body.lastName, username: req.body.username, email: req.body.email}, req.body.password, (err, user) => {
+    Users.register({firstName: req.body.firstName, lastName: req.body.lastName, username: req.body.username, email: req.body.email, bio: req.body.bio}, req.body.password, (err, user) => {
       if (err) {
         console.log(err);
         res.redirect('/register');

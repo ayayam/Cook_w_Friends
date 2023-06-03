@@ -32,13 +32,15 @@ const userSchema = new Schema ({
         type: String,
     },
     shoppingList: {
-        type: Array,
+        type: Schema.Types.ObjectId,
+        ref: "shoppingList"
     },
     friendsList: {
         type: Array,
     },
     recipesList: {
-        type: Array,
+        type: Schema.Types.ObjectId,
+        ref: "recipes"
     }
 });
 

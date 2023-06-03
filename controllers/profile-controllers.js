@@ -6,6 +6,7 @@ module.exports = {
         const {_id} = req.params;
         Users.findOne({_id: _id})
         .then((users) => {
+            console.log(users);
             res.render('pages/profile', {
                 users: users
             });
