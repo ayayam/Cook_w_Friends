@@ -3,7 +3,7 @@ const Recipes = require('../models/recipe-model')
 
 module.exports = {
     cookbook_get: (req, res) => {
-        Recipes.find()
+        Recipes.find({}, "recipeName")
         .then(recipes => {
             res.render('pages/cookbook', 
             { recipes: recipes }

@@ -3,6 +3,7 @@ const User = require('../models/user-model');
 
 module.exports = {
     landing_page: (req, res) => {
-        res.render('pages/user_landing', {});
+        const user = req.user
+        res.render('pages/user_landing', {user: user});
 }
 }
