@@ -26,7 +26,7 @@ module.exports = {
             bio: bio
         }}, {new: true})
         .then(() => {
-            res.redirect('pages/profile')
+            res.render('pages/profile', { users: user });
         })
         .catch((err) => {
             console.log(err)

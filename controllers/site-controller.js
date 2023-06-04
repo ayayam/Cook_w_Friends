@@ -22,9 +22,11 @@ module.exports = {
         res.redirect('/login');
       } else {
         passport.authenticate('local')(req, res, () => {
-          const user = req.user;
-            res.render('pages/profile', { users: user });
+          res.redirect('/admin');
         });
+        
+
+
         // passport.authenticate("local")(req, res, () => {
         //   Users.find({ username: username }).then((user) => {
         //     res.redirect("/user/_:id/profile", { users: user });
@@ -41,7 +43,7 @@ module.exports = {
   contact_us_post: (req, res) => {},
 
   register_get: (req, res) => {
-    res.render(pages/register, {});
+    res.render('pages/register', {});
   },
 
 
@@ -52,7 +54,7 @@ module.exports = {
         res.redirect('/register');
       } else {
         passport.authenticate('local')(req, res, () => {
-          res.redirect('/user/_:id/profile/')
+          res.redirect('/admin')
         });
       }
     });
@@ -79,15 +81,15 @@ module.exports = {
 
   search_post: (req, res) => {},
 
-  google_get: passport.authenticate("google", {
-    scope: ["openid", "profile", "email"],
+  google_get: passport.authenticate('google', {
+    scope: ['openid', 'profile', 'email'],
   }),
 
   google_redirect_get: [
-    passport.authenticate("google", { failureRedirect: "/login" }),
+    passport.authenticate('google', { failureRedirect: '/login' }),
     function (req, res) {
-      res.redirect("/user/_:id/profile");
-      alert("You are logged in");
+      res.redirect('/admin');
+      console.log('You are logged in');
     },
   ],
 
@@ -96,7 +98,7 @@ module.exports = {
       if (err) {
         return next(err);
       }
-      res.redirect("/");
+      res.redirect('/');
     });
   },
 };

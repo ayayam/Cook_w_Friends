@@ -3,11 +3,11 @@ const Recipes = require('../models/recipe-model')
 
 module.exports = {
     cookbook_get: (req, res) => {
-        Recipes.find({})
+        Recipes.find()
         .then(recipes => {
-            res.render('pages/cookbook', {
-                recipes: recipes
-            });
+            res.render('pages/cookbook', 
+            { recipes: recipes }
+            );
         })
         .catch((err) => {
             console.log(err);
@@ -43,7 +43,7 @@ module.exports = {
     },
 
     create_recipe_post: (req, res) => {
-        const { recipeName, images, ingredients, instructions } = req.body;
+        const { recipeName, ingredients, instructions } = req.body;
         const newRecipe = new Recipes ({
             recipeName: recipeName,
             // images: images,
@@ -53,7 +53,7 @@ module.exports = {
 
         newRecipe.save();
 
-        res.redirect('/user/_:id/cookbook/')
+        res.render('/user/cookbook/:_id')
     },
 
     update_recipe_get: (req, res) => {
