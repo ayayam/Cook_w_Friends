@@ -4,11 +4,10 @@ const router = express.Router();
 
 router.route('/:_id')
     .get(profileController.profile_get)
-    
+    .put(profileController.profile_edit_put)    
 
-router.route('/profile-edit')
+router.route('/profile-edit/:_id')
     .get(profileController.profile_edit_get)
-    .put(profileController.profile_edit_put)
-    
 
+    
 module.exports = router;

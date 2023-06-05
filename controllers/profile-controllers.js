@@ -18,14 +18,14 @@ module.exports = {
 
     profile_edit_put: (req, res) => {
         const {_id} = req.params;
-        const {avatar, firstName, lastName, bio} = req.body;
+        const {firstName, lastName, bio} = req.body;
         Users.findByIdAndUpdate(_id, {$set: {
-            avatar: avatar,
             firstName: firstName,
             lastName: lastName,
             bio: bio
         }}, {new: true})
         .then(() => {
+            const user = req.user
             res.render('pages/profile', { users: user });
         })
         .catch((err) => {
@@ -36,9 +36,10 @@ module.exports = {
     profile_edit_get: (req, res) => {
         const { _id } = req.params;
         Users.findOne({_id: _id})
-            .then(user => {
+            .then(users => {
+                const user = req.user
                 res.render('pages/profile_edit', {
-                    user: user
+                    users: user
                 })
             })
             .catch(err => {

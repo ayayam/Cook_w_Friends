@@ -1,0 +1,8 @@
+<% for (recipe of recipes) { %>
+    <figure class="recipe-row">
+        <a class="recipe-link" href="./user/cookbook/<%= recipe._id%>">
+            <!-- <img class="recipe-img" src="" alt="<%# recipe.recipeName %>"> -->
+        </a>
+            <figcaption class="recipe-figcaption"><a class="recipe-link" href="./user/cookbook/<%= recipe._id%>"><%= recipe.recipeName =%></a></figcaption>
+    </figure>
+<% } %>
