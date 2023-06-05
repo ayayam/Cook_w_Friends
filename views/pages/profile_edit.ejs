@@ -4,13 +4,13 @@
     <main class="profile-container">
         <h1 class="hidden-title-769">Edit Profile</h1>
         
-        <form class="bio-edit" action="/user/:_id/?_method=PUT" method="POST">
-
+        <form class="bio-edit" action="/user/<%= users._id %>/?_method=PUT" method="POST">
+            
             <section class="edit-profile-bio">
                 <picture class="edit-portrait"></picture>
                 <a class="button"><button class="submit edit">Change Picture</button></a>
             </section>
-        
+
         <h1 class="hidden-title-768">Edit Profile</h1>    
 
             <section>

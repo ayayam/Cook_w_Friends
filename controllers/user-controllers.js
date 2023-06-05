@@ -1,5 +1,5 @@
 const Users = require("../models/user-model");
-const Recipes = require('../models/recipe-model')
+const Recipes = require('../models/recipe-model');
 
 module.exports = {
     profile_get: (req, res) => {
@@ -24,9 +24,9 @@ module.exports = {
             lastName: lastName,
             bio: bio
         }}, {new: true})
-        .then(() => {
-            const user = req.user
-            res.render('pages/profile', { users: user });
+        .then((users) => {
+            res.render('pages/profile',
+            {users: users});
         })
         .catch((err) => {
             console.log(err)
@@ -129,7 +129,7 @@ module.exports = {
             instructions: instructions
         }}, {new: true})
             .then(() => {
-                res.redirect('/:id')
+                res.redirect('/:_id')
             })
             .catch(err => {
                 console.log(err)
