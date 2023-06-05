@@ -10,7 +10,7 @@
             <section class="bio-text">
                 <p class="name"><%= users.firstName %> <%= users.lastName %></p>
                 <p class="bio"><%= users.bio %></p>
-                <a class="button" href="/user/profile/profile-edit/<% users.id %>">
+                <a class="button" href="/user/<%= users.id %>/profile-edit">
                     <button class="submit edit">Edit</button>
                 </a>
             </section>
@@ -27,7 +27,7 @@
         </section>  -->
         <section class="profile-links">
             <ul class="user-actions">
-                <a class="profile-button" href="/user/cookbook/:_id"><button class="action">My Cookbook</button></a>
+                <a class="profile-button" href="/user/:_id/cookbook"><button class="action">My Cookbook</button></a>
                 <a class="profile-button" href="/user/friends/"><button class="action">My Friends</button></a>
                 <a class="profile-button" href="/user/shopping-list/"><button class="action">Shopping List</button></a>
                 <a class="profile-button" href="/search"><button class="action">Search</button></a>

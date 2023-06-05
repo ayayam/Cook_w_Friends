@@ -605,7 +605,7 @@ button.action:active {
 }
 .bio-edit {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     width: 100%;
     margin-left: 10px;
 } 
