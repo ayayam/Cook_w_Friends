@@ -525,6 +525,8 @@ button.action:active {
     min-width: 125px;
     height: 150px;
     min-height: 150px;
+    /* background-image: url(/image/Logo1.png);
+    background-size: 125px; */
 }
 .fa-image-portrait {
     font-size: 3em;
