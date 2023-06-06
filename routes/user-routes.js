@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.route('/:_id')
     .get(userControllers.profile_get)
-    .put(userControllers.profile_edit_put)    
+    .post(userControllers.profile_edit_put)    
 
 router.route('/:_id/profile-edit')
     .get(userControllers.profile_edit_get)
