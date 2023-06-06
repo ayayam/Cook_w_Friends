@@ -26,7 +26,7 @@ module.exports = {
         }}, {new: true})
         .then((users) => {
             res.render('pages/profile',
-            { users: users });
+            {users: users});
         })
         .catch((err) => {
             console.log(err)
@@ -45,32 +45,21 @@ module.exports = {
                 console.log(err);
             })
     },
-
     cookbook_get: (req, res) => {
-        // console.log(req)
-        // const {_id} = req.params;
-        // Recipes.find({ user_id: _id })
+        const {_id} = req.params;
+        Recipes.find({})
         // try removing recipeName as second param
         // when using 'recipeName' as second param, ejs portion doesn't show but cookbook page loads
         // adding (recipes, err) as second param did something - threw an error that recipes was undefined
         // having just recipes or just err as second param threw an error
-
-// *this is the best code so far*
-        // const {_id} = req.params;
-        // Users.findOne({user_id: _id },
-        // // Users.findOne(
-        //    Recipes.find({}) 
-        //    .then((recipes) => {
-        //     res.render('pages/cookbook', 
-        //     { recipes: recipes} 
-        //     // { users: users }
-        // );
-        // }))
-        // .catch((err) => {
-        //     console.log(err);
-        // })
-        const {_id} = req.params;
-        Recipes.find({})
+        .then((recipes) => {
+            res.render('pages/cookbook', 
+            { recipes: recipes }
+        );
+        })
+        .catch((err) => {
+            console.log(err);
+        })
     },
 
     recipe_get: (req, res) => {
@@ -109,6 +98,7 @@ module.exports = {
             // images: images,
             ingredients: ingredients,
             instructions: instructions,
+            
         })
 
         newRecipe.save();
