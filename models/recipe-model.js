@@ -7,16 +7,16 @@ const recipeSchema = new Schema({
         // required: [true, "Please enter recipe name"],
         // minlength: [1, "Please enter at least 1 character"]
     },
-    // images: {
-    //     type: String,
-    // },
-    ingredients: {
+    images: {
         type: String,
+    },
+    ingredients: {
+        type: Array,
         // required: [true, "Please enter some ingredients"],
         // minlength: [1, "Please enter at least 1 character"]
     },
     instructions: {
-        type: String,
+        type: Array,
         // required: [true, "Please enter instructions"],
         // minlength: [1, "Please enter at least 1 character"]
     }

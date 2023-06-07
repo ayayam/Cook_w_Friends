@@ -7,7 +7,7 @@ module.exports = {
     Users.findOne({ _id: _id })
       .then((users) => {
         console.log(users);
-        res.render("pages/profile", {
+        res.render('pages/profile', {
           users: users,
         });
       })
@@ -31,7 +31,7 @@ module.exports = {
       { new: true }
     )
       .then((users) => {
-        res.render("pages/profile", { users: users });
+        res.render('pages/profile', { users: users });
       })
       .catch((err) => {
         console.log(err);
@@ -42,7 +42,7 @@ module.exports = {
     const { _id } = req.params;
     Users.findOne({ _id: _id })
       .then((user) => {
-        res.render("pages/profile_edit", {
+        res.render('pages/profile_edit', {
           users: user,
         });
       })
@@ -52,28 +52,6 @@ module.exports = {
   },
 
   cookbook_get: (req, res) => {
-    // console.log(req)
-    // const {_id} = req.params;
-    // Recipes.find({ user_id: _id })
-    // try removing recipeName as second param
-    // when using 'recipeName' as second param, ejs portion doesn't show but cookbook page loads
-    // adding (recipes, err) as second param did something - threw an error that recipes was undefined
-    // having just recipes or just err as second param threw an error
-
-    // *this is the best code so far*
-    // const {_id} = req.params;
-    // // Users.findOne({_id: _id },
-    // // Users.findOne(
-    //    Recipes.find({user_id: _id})
-    //    .then((recipes) => {
-    //     res.render('pages/cookbook',
-    //     { recipes: recipes }
-    //     // { users: users }
-    // );
-    // }))
-    // .catch((err) => {
-    //     console.log(err);
-    // })
     const { _id } = req.params;
     console.log(_id)
     Recipes.find({ user_id: _id })
@@ -90,7 +68,7 @@ module.exports = {
     const { _id } = req.params;
     Recipes.findOne({ _id: _id })
       .then((recipe) => {
-        res.render("pages/recipe", {
+        res.render('pages/recipe', {
           recipe: recipe,
         });
       })
@@ -103,7 +81,7 @@ module.exports = {
     const { _id } = req.params;
     Recipes.deleteOne({ _id: _id })
       .then(() => {
-        res.redirect("/:_id/cookbook");
+        res.redirect('/:_id/cookbook');
       })
       .catch((err) => {
         console.log(err);
@@ -111,28 +89,28 @@ module.exports = {
   },
 
   create_recipe_get: (req, res) => {
-    res.render("pages/create_recipe");
+    res.render('pages/create_recipe');
   },
 
   create_recipe_post: (req, res) => {
-    const { recipeName, ingredients, instructions } = req.body;
+    const { recipeName, images, ingredients, instructions } = req.body;
     const newRecipe = new Recipes({
       recipeName: recipeName,
-      // images: images,
+      images: images,
       ingredients: ingredients,
       instructions: instructions,
     });
 
     newRecipe.save();
 
-    res.render("pages/profile");
+    res.render('pages/profile');
   },
 
   update_recipe_get: (req, res) => {
     const { _id } = req.params;
     Recipes.findOne({ _id: _id })
       .then((recipe) => {
-        res.render("pages/update_recipe", {
+        res.render('pages/update_recipe', {
           recipe: recipe,
         });
       })
@@ -156,8 +134,10 @@ module.exports = {
       },
       { new: true }
     )
-      .then(() => {
-        res.redirect("/:_id");
+      .then((recipe) => {
+        res.render('pages/recipe', {
+            recipe: recipe
+        });
       })
       .catch((err) => {
         console.log(err);
