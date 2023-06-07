@@ -103,7 +103,7 @@ module.exports = {
 
     newRecipe.save();
 
-    res.render('pages/profile');
+    res.render('pages/recipe');
   },
 
   update_recipe_get: (req, res) => {
@@ -143,4 +143,4 @@ module.exports = {
         console.log(err);
       });
   },
-};
+}

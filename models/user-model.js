@@ -32,7 +32,7 @@ const userSchema = new Schema ({
         type: String,
     },
     shoppingList: {
-        type: Array,
+        type: ,
         ref: "shoppingList"
     },
     friendsList: {
