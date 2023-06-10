@@ -58,6 +58,7 @@ module.exports = {
     // use when finding recipes with it's user_id
     Recipes.find({ user_id: _id })
     // Recipes.find({user: _id})
+      .sort({ recipeName: 1 })
       .then((recipes) => {
         console.log(recipes)
         res.render('pages/cookbook', { recipes: recipes });
