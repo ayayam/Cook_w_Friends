@@ -53,8 +53,11 @@ module.exports = {
 
   cookbook_get: (req, res) => {
     const { _id } = req.params;
+    const { username } = req.body;
     console.log(_id)
+    // use when finding recipes with it's user_id
     Recipes.find({ user_id: _id })
+    // Recipes.find({user: _id})
       .then((recipes) => {
         console.log(recipes)
         res.render('pages/cookbook', { recipes: recipes });
@@ -89,16 +92,17 @@ module.exports = {
   },
 
   create_recipe_get: (req, res) => {
-    res.render('pages/create_recipe');
+    res.render('pages/create_recipe', { recipe: recipe });
   },
 
   create_recipe_post: (req, res) => {
-    const { recipeName, images, ingredients, instructions } = req.body;
+    const { recipeName, images, ingredients, instructions, user } = req.body;
     const newRecipe = new Recipes({
       recipeName: recipeName,
       images: images,
       ingredients: ingredients,
       instructions: instructions,
+      user: user
     });
 
     newRecipe.save();
@@ -108,6 +112,7 @@ module.exports = {
 
   update_recipe_get: (req, res) => {
     const { _id } = req.params;
+    const { recipeName, images, ingredients, instructions } = req.body;
     Recipes.findOne({ _id: _id })
       .then((recipe) => {
         res.render('pages/update_recipe', {

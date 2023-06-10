@@ -6,6 +6,8 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const mongooseFindOrCreate = require('mongoose-findorcreate');
 
 const userSchema = new Schema ({
+    _id: Schema.Types.ObjectId,
+
     firstName: {
         type: String,
     },
@@ -32,16 +34,17 @@ const userSchema = new Schema ({
         type: String,
     },
     shoppingList: {
-        type: ,
-        ref: "shoppingList"
+        // type: Schema.Types.Objectid,
+        // ref: "shoppingList"
     },
     friendsList: {
         type: Array,
     },
-    recipesList: {
-        type: Array,
-        ref: "recipes"
-    }
+    recipesList: [ 
+        {type: Schema.Types.ObjectId,
+        ref: "Recipes"}
+    ]
+        
 });
 
 userSchema.plugin(passportLocalMongoose);

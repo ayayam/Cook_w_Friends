@@ -19,7 +19,16 @@ const recipeSchema = new Schema({
         type: Array,
         // required: [true, "Please enter instructions"],
         // minlength: [1, "Please enter at least 1 character"]
+    },
+    user_id: {
+        type: String
     }
+    // below throws error:
+    // user_id: [
+    //     {type: Schema.Types.ObjectId,
+    //     ref: "Users"}
+    // ],
+    
 })
 
 const Recipes = mongoose.model('recipes', recipeSchema);

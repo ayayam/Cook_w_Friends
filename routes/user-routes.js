@@ -23,7 +23,7 @@ router.route('/:_id/create-recipe')
 router.route('/recipe/:_id/update-recipe')
     .get(userControllers.update_recipe_get)
 
-router.route('/:_id/recipe/:_id')
+router.route('/recipe/:_id')
     .get(userControllers.recipe_get)
     .post(userControllers.create_recipe_post)
     .post(userControllers.update_recipe_put)
