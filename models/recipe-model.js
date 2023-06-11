@@ -20,7 +20,7 @@ const recipeSchema = new Schema({
         // required: [true, "Please enter instructions"],
         // minlength: [1, "Please enter at least 1 character"]
     },
-    user_id: {
+    user: {
         type: String
     }
     // below throws error:

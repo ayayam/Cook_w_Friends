@@ -703,6 +703,9 @@ button.action:active {
     width: 70px;
     height: 75px;
 }
+.ingredients {
+    width: 40%;
+}
 .ingredients-title {
     margin-top: 50px;
     margin-bottom: 0;
@@ -711,6 +714,7 @@ button.action:active {
     display: flex;
     font-family: var(--unbounded);
     justify-content: space-evenly;
+    width: 95%;
 }
 .new-ingredients {
     margin-bottom: 10px;
@@ -724,6 +728,11 @@ button.action:active {
     font-family: var(--roboto);
     font-weight: 300;
     font-size: 20px;
+}
+.no-bullets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 .ingredients-list-subtitle {
     text-decoration: underline;

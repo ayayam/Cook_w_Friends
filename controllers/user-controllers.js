@@ -56,7 +56,7 @@ module.exports = {
     const { username } = req.body;
     console.log(_id)
     // use when finding recipes with it's user_id
-    Recipes.find({ user_id: _id })
+    Recipes.find({ user: _id })
     // Recipes.find({user: _id})
       .sort({ recipeName: 1 })
       .then((recipes) => {
