@@ -85,7 +85,7 @@ module.exports = {
     const { _id } = req.params;
     Recipes.deleteOne({ _id: _id })
       .then(() => {
-        res.redirect('/:_id/cookbook');
+        res.redirect('/user/:_id/cookbook');
       })
       .catch((err) => {
         console.log(err);
@@ -93,7 +93,14 @@ module.exports = {
   },
 
   create_recipe_get: (req, res) => {
-    res.render('pages/create_recipe', { recipe: recipe });
+    const { recipeName, images, ingredients, instructions, user } = req.body;
+    res.render('pages/create_recipe', { 
+      recipeName: recipeName,
+      images: images,
+      ingredients: ingredients,
+      instructions: instructions,
+      user: user
+     });
   },
 
   create_recipe_post: (req, res) => {
@@ -109,15 +116,21 @@ module.exports = {
     newRecipe.save();
 
     res.render('pages/recipe');
+
+    
   },
 
   update_recipe_get: (req, res) => {
     const { _id } = req.params;
-    const { recipeName, images, ingredients, instructions } = req.body;
+    // let ingredientsList = [];
+    // for (let i = 0; i < req.body.ingredients.length; i++) {
+    //   ingredientsList.push({ingredients: req.body.ingredients[i]});
+    // }
+    // const { recipeName, images, ingredients, instructions, user } = req.body;
     Recipes.findOne({ _id: _id })
       .then((recipe) => {
         res.render('pages/update_recipe', {
-          recipe: recipe,
+          recipe: recipe
         });
       })
       .catch((err) => {

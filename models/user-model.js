@@ -34,8 +34,7 @@ const userSchema = new Schema ({
         type: String,
     },
     shoppingList: {
-        // type: Schema.Types.Objectid,
-        // ref: "shoppingList"
+        type: Array,
     },
     friendsList: {
         type: Array,

@@ -4,21 +4,21 @@ const { Schema } = mongoose;
 const recipeSchema = new Schema({
     recipeName: {
         type: String,
-        // required: [true, "Please enter recipe name"],
-        // minlength: [1, "Please enter at least 1 character"]
+        required: [true, "Please enter recipe name"],
+        minlength: [1, "Please enter at least 1 character"]
     },
     images: {
         type: String,
     },
     ingredients: {
         type: Array,
-        // required: [true, "Please enter some ingredients"],
-        // minlength: [1, "Please enter at least 1 character"]
+        required: [true, "Please enter some ingredients"],
+        minlength: [1, "Please enter at least 1 character"]
     },
     instructions: {
         type: Array,
-        // required: [true, "Please enter instructions"],
-        // minlength: [1, "Please enter at least 1 character"]
+        required: [true, "Please enter instructions"],
+        minlength: [1, "Please enter at least 1 character"]
     },
     user: {
         type: String

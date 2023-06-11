@@ -10,6 +10,6 @@ router.use('/', siteRoutes);
 router.use('/admin', adminRoutes);
 router.use('/user', userRoutes);
 router.use('/user/friends', friendsRoutes);
-router.use('/user/shopping-list', shoppingListRoutes);
+router.use('/shopping-list', shoppingListRoutes);
 
 module.exports = router;
