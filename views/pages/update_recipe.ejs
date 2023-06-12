@@ -24,16 +24,15 @@
         </section> -->
 
         <section class="ingredients-instructions">
+            
             <section class="new-ingredients">
-                <label for="new-ingredients" class="ingredients-title label">Ingredients:</label>
-            <%# for (let i = 0; i < recipe.ingredients.length; i++) { %>
-                <textarea id="new-ingredients" class="new-recipe-input" value="<%= recipe.ingredients %>"></textarea>
-            <%# } %>
+                <label for="ingredients" class="ingredients-title label">Ingredients:</label>
+                <textarea id="ingredients" name="ingredients" class="new-recipe-input" value=""><%= recipe.ingredients %></textarea>
             </section>
 
             <section class="new-ingredients">
-                <label for="new-instructions" class="ingredients-title label">Instructions:</label>
-                <textarea id="new-instructions" type="textarea" class="new-recipe-input" value="<%= recipe.instructions %>"></textarea>
+                <label for="instructions" class="ingredients-title label">Instructions:</label>
+                <textarea id="instructions" name="instructions" type="textarea" class="new-recipe-input" value=""><%= recipe.instructions %></textarea>
             </section>
         </section>
 

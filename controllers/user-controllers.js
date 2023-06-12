@@ -53,7 +53,7 @@ module.exports = {
 
   cookbook_get: (req, res) => {
     const { _id } = req.params;
-    const { username } = req.body;
+    // const { username } = req.body;
     console.log(_id)
     // use when finding recipes with it's user_id
     Recipes.find({ user: _id })
