@@ -3,30 +3,52 @@
 
     <main class="form-container">
         <h1 class="form-title">New User? Sign up here.</h1>
-        <form class="form">
+
+      <!-- <div id="g_id_onload"
+         data-client_id="1052595190342-3fqqj1g5jcb7ch1aaif7o4ms4hf25rve.apps.googleusercontent.com"
+         data-login_uri="http://localhost:3000/auth/google"
+         data-auto_prompt="false">
+      </div>
+      <div class="g_id_signin"
+         data-type="standard"
+         data-size="large"
+         data-theme="outline"
+         data-text="sign_in_with"
+         data-shape="rectangular"
+         data-logo_alignment="left">
+      </div> -->
+
+        <button class="edit center"> 
+            <a href="/auth/google" style="color:var(--peach); width:75vw">REGISTER WITH YOUR GOOGLE ACCOUNT<br>(and fill in your profile info later)</a>
+        </button> 
+        <form class="form" action="/register" method="POST">
             <div class="form-row">
-                <label class="label" for="first-name">First Name:<span class="req">*</span></label>
-                <input class="input" id="first-name" name ="first-name" type="text" placeholder="First name" required>
+                <label class="label" for="firstName">First Name:<span class="req">*</span></label>
+                <input class="input" id="firstName" name ="firstName" type="text" placeholder="First name" required>
             </div>
             <div class="form-row">
-                <label class="label" for="last-name">Last Name:<span class="req">*</span></label>
-                <input class="input" id="last-name" name="last-name" type="text" placeholder="Last name" required>
+                <label class="label" for="lastName">Last Name:<span class="req">*</span></label>
+                <input class="input" id="lastName" name="lastName" type="text" placeholder="Last name" required>
             </div>
             <div class="form-row">
-                <label class="label" for="nickname">Nickname: (not required)</label>
-                <input class="input" id="nickname" name="nickname" type="text" placeholder="Optional">
+                <label class="label" for="bio">A little blurb about yourself:<span class="req">*</span></label>
+                <input class="input" id="bio" name="bio" type="text" placeholder="Tell everyone a little something about yourself" required>
+            </div>
+            <div class="form-row">
+                <label class="label" for="username">Username:<span class="req">*</span></label>
+                <input class="input" id="username" name="username" type="text" placeholder="Username" required>
             </div>
             <div class="form-row">
                 <label class="label" for="email">Email Address:<span class="req">*</span></label>
-                <input class="input" id="email" name="email"type="email" placeholder="xyz@mail.com" required>
+                <input class="input" id="email" name="email" type="email" placeholder="xyz@mail.com" required>
             </div>
             <div class="form-row">
-                <label class="label" for="pwd" >Password:<span class="req">*</span></label>
-                <input class="input" id="pwd" name="pwd" type="password" placeholder="Password" required>
+                <label class="label" for="password" >Password:<span class="req">*</span></label>
+                <input class="input" id="password" name="password" type="password" placeholder="Password" required>
             </div>
             <div class="form-row">
-                <label class="label" for="pwd">Confirm Password:<span class="req">*</span></label>
-                <input class="input" id="pwd" name="pwd" type="password" required>
+                <label class="label" for="confirmPassword">Confirm Password:<span class="req">*</span></label>
+                <input class="input" id="confirmPassword" name="confirmPassword" type="password" required>
             </div>
             <p class="form-req"><span class="req">*</span> - Required Field</p>
             <button class="submit edit join button" type="submit">Join Us</button>

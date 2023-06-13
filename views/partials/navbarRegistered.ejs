@@ -1,25 +1,29 @@
 <body>
     <header class="header">
-        <a class="logo-container" href="/home">
+        <a class="logo-container" href="/user/profile/">
             <img class="logo" src="/image/LogoIcon.png" alt="Cook with Friends logo">
-            <p class="header-title-link header-title" href="/">Cook with Friends</p> 
+            <p class="header-title-link header-title" href="/user/profile/">Cook with Friends</p> 
         </a>
         
         <nav class="navbar-user">
-            <a class="navlinks" href="/profile">Profile</a>
-            <a class="navlinks" href="/cookbook">Cookbook</a>
-            <a class="navlinks" href="/friends">Friends</a>
-            <a class="navlinks" href="/shopping_list">Shop List</a>
-            <a class="navlinks" href="/search">Search</a>
+            <!-- <a class="navlinks" href="/user/:_id">Profile</a>
+            <a class="navlinks" href="/user/:_id/cookbook">Cookbook</a>
+            <a class="navlinks" href="/user/friends/">Friends</a>
+            <a class="navlinks" href="/user/shopping-list/">Shopping List</a>
+            <a class="navlinks" href="/search">Search</a> -->
+            <a class="navlinks" data-pathname="/contact_us.ejs" href="/contact_us">Contact Us</a>
+            <a class="navlinks" href="/logout">Logout</a>
         </nav>
         <section class="hamburger-dropdown">
             <a class="hamburger-menu" onclick="hamburgerDropdown()"><i class="fa-solid fa-bars"></i></a>
             <div id="hamburgerDropdown" class="hamburger-dropdown-content">
-                <a class="hamburger-link" href="/profile">Profile</a>
-                <a class="hamburger-link" href="/cookbook">Cookbook</a>
-                <a class="hamburger-link" href="/friends">Friends</a>
-                <a class="hamburger-link" href="/shopping_list">Shop List</a>
+                <a class="hamburger-link" href="/user/:_id">Profile</a>
+                <a class="hamburger-link" href="/user/:_id/cookbook">Cookbook</a>
+                <a class="hamburger-link" href="/user/friends/">Friends</a>
+                <a class="hamburger-link" href="/user/shopping-list/">Shopping List</a>
                 <a class="hamburger-link" href="/search">Search</a>
+                <a class="hamburger-link" href="/logout">Logout</a>
+                <a class="hamburger-link" data-pathname="/contact_us.ejs" href="/contact_us">Contact Us</a>
             </div> 
         </section>
     </header>

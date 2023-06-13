@@ -6,7 +6,8 @@
             <h1 class="contact-us-title">Contact Us</h1>
             <p class="contact-us-subtitle">Let us know of any issues, suggestions or comments!</p>
         </header>
-        <form class="contact-us-form">
+
+        <form class="contact-us-form" action="https://formspree.io/f/mvonnyvb" method="POST">
             <div class="contact-us-row">
                 <label class="label" for="contact-form-email">E-mail:</label>
                 <input class="input" id="contact-form-email" name="contact-form-email" type="email">
@@ -17,7 +18,7 @@
             </div>
             <div class="contact-us-row">
                 <label class="label" for="contact-form-textarea">Type your message here: </label>
-                <textarea class="input textarea" id="contact-form-textarea" id="contact-form-textarea" type="textarea"></textarea>
+                <textarea class="input textarea" id="contact-form-textarea" id="contact-form-textarea" type="textarea" name="message"></textarea>
             </div>
             <button class="submit" type="submit">Submit</button>
         </form>

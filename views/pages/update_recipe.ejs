@@ -3,29 +3,41 @@
 
 <main class="recipe-container">
     <header class="recipe-header">
-        <h1 class="recipe-title">Create a New Recipe</h1>
+        <h1 class="recipe-title">
+            Update<span style="color: var(--red)"> <%= recipe.recipeName %></span></h1>
     </header>
-    <form class="new-recipe-form">
+    <form class="new-recipe-form" action="../<%= recipe._id %>/update-recipe" method="POST">
         <section class="new-recipe">
             <label class="label" for="new-recipe-title">Enter Recipe Name:</label>
-            <input type="text" class="input" id="new-recipe-title">
+            <input type="text" class="input" name="recipeName" id="new-recipe-title" value="<%= recipe.recipeName %>">
         </section>    
 
-        <section class="recipe-album new-recipe-album">
-            <!-- javascript loop -->
-            <button class="add-photo"><i class="fa-solid fa-camera"></i>Add Photo</button>
-            <img class="recipe-album-img" src="" alt="">
+        <section class="new-recipe">
+            <label class="label" for="user">Enter User Id:</label>
+            <input type="text" class="input" id="user" name="user" value="<%= recipe.user %>">
         </section>
 
+        <section class="new-recipe">
+            <label class="label" for="images">Enter Image File Name:</label>
+            <input type="text" class="input" id="images" name="images" value="<%= recipe.images %>">
+        </section>
+
+        <!-- <section class="recipe-album new-recipe-album"> -->
+            <!-- javascript loop -->
+            <!-- <button class="add-photo"><i class="fa-solid fa-camera"></i>Add Photo</button>
+            <img class="recipe-album-img" src="" alt="">
+        </section> -->
+
         <section class="ingredients-instructions">
+
             <section class="new-ingredients">
-                <label for="new-ingredients" class="ingredients-title label">Ingredients:</label>
-                <textarea id="new-ingredients" class="new-recipe-input"></textarea>
+                <label for="ingredients" class="ingredients-title label">Ingredients:</label>
+                <textarea id="ingredients" name="ingredients" class="new-recipe-input" value=""><%= recipe.ingredients %></textarea>
             </section>
 
             <section class="new-ingredients">
-                <label for="new-instructions" class="ingredients-title label">Instructions:</label>
-                <textarea id="new-instructions" type="textarea" class="new-recipe-input"></textarea>
+                <label for="instructions" class="ingredients-title label">Instructions:</label>
+                <textarea id="instructions" name="instructions" type="textarea" class="new-recipe-input" value=""><%= recipe.instructions %></textarea>
             </section>
         </section>
 

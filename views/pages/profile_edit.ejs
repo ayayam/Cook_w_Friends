@@ -3,28 +3,34 @@
 
     <main class="profile-container">
         <h1 class="hidden-title-769">Edit Profile</h1>
-        <section class="edit-profile-bio">
-            <picture class="edit-portrait"></picture>
-            <a class="button"><button class="submit edit">Change Picture</button></a>
-        </section>
-        <form class="bio-edit">
-            <h1 class="hidden-title-768">Edit Profile</h1>
+        
+        <form class="bio-edit" action="/user/<%= users._id %>" method="POST">
+            
+            <section class="edit-profile-bio">
+                <picture class="edit-portrait"></picture>
+                <a class="button"><button class="submit edit">Change Picture</button></a>
+            </section>
+
+        <h1 class="hidden-title-768">Edit Profile</h1>    
+
+            <section>
             <div class="edit-form-row">
-                <label class="label">Name:</label>
-                <input class="input" type="text">
+                <label class="label" for="firstName">First Name:</label>
+                <input class="input" type="text" id="firstName" name="firstName" value="<%= users.firstName %>">
             </div>
             <div class="edit-form-row">
-                <label class="label">Nickname:</label>
-                <input class="input" type="text">
+                <label class="label" for="lastName">Last Name:</label>
+                <input class="input" type="text" id="lastName" name="lastName" value="<%= users.lastName %>">
             </div>
             <div class="edit-form-row">
-                <label class="label">A blurb about yourself:</label>
-                <input class="input" type="textarea">
+                <label class="label" for="bio">A blurb about yourself:</label>
+                <input class="input" type="textarea" id="bio" name="bio" value="<%= users.bio %>">
             </div>
-                
+          
             <a class="button" href="">
                 <button class="submit edit" type="submit">Save Changes</button>
             </a>
+        </section>  
         </form>
     </main>
 

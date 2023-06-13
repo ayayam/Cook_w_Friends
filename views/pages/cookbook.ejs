@@ -10,7 +10,7 @@
                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </div>
-        <nav class="alphabet-nav">
+        <nav class="alphabet-nav" id="alphabet-nav">
             <a class="alphabet-link" href="#">A</a>
             <a class="alphabet-link" href="#">B</a>
             <a class="alphabet-link" href="#">C</a>
@@ -38,39 +38,14 @@
             <a class="alphabet-link" href="#">Y</a>
             <a class="alphabet-link" href="#">Z</a>
         </nav>
-    <div class="max786-recipe-list">
-        <section class="recipe-list">
-            <button class="green-button edit add-cookbook" type="submit" onclick="">Add New Recipe</button>
-            <figure class="recipe-row">
-                <a class="recipe-link" href="/recipe">
-                <img class="recipe-img" src="/image/lauren-gray-cinnamon-rolls.jpg" alt=""></a>
-                <figcaption class="recipe-figcaption"><a class="recipe-link" href="recipe.html">Cinnamon Rolls</a></figcaption>
-            </figure>
-            <figure class="recipe-row">
-                <a class="recipe-link" href="#">
-                <img class="recipe-img" src="/image/pappardelle.jpg" alt=""></a>
-                <figcaption class="recipe-figcaption"><a class="recipe-link" href="#">Creamy Butternut, Bacon and Leek Pappardelle</a></figcaption>
-            </figure>
-            <figure class="recipe-row">
-                <a class="recipe-link" href="#">
-                <img class="recipe-img" src="/image/stefen-tan-katsu-curry.jpg" alt=""></a>
-                <figcaption class="recipe-figcaption"><a class="recipe-link" href="#">Japanese Katsu Curry</a></figcaption>
-            </figure>
-            <figure class="recipe-row">
-                <a class="recipe-link" href="#">
-                <img class="recipe-img" src="/image/jonathan-farber-lemon-chicken.jpg" alt=""></a>
-                <figcaption class="recipe-figcaption"><a class="recipe-link" href="#">Lemon Garlic Chicken</a></figcaption>
-            </figure>
-            <figure class="recipe-row">
-                <a class="recipe-link" href="#">
-                <img class="recipe-img" src="/image/pexels-alesia-kozik-lentil-soup.jpg" alt=""></a>
-                <figcaption class="recipe-figcaption"><a class="recipe-link" href="#">Lentil Soup</a></figcaption>
-            </figure>
-            <figure class="recipe-row">
-                <a class="recipe-link" href="#">
-                <img class="recipe-img" src="/image/amirali-mirhashemian-tomato-spinach-pasta.jpg" alt=""></a>
-                <figcaption class="recipe-figcaption"><a class="recipe-link" href="#">Tomato and Spinach Pasta</a></figcaption>
-            </figure>
+    <div class="max786-recipe-list" id="recipe-list">
+        <section class="recipe-list" id="recipe-list" style="margin-top: 0;">
+            <a class="green-button" style="width:60vw; text-align: center;" href="./create-recipe">Add New Recipe</a>
+
+
+            <%- include ('../partials/cookbook-loop.ejs') %>
+ 
+
         </section>
         <nav class="alphabet-nav-side">
             <a class="alphabet-link" href="#">A</a>
