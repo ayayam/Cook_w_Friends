@@ -414,8 +414,11 @@ button.action:active {
         visibility: visible;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        margin-top: 40px;
         align-items: center;
+    }
+    .alphabet-link {
+        margin-bottom: 10px;
     }
     .max786-recipe-list {
         display: flex;
@@ -423,6 +426,10 @@ button.action:active {
     }
     .add-cookbook {
         margin-top: 1%;
+    }
+    .ingredients,
+    .instructions {
+        margin: auto;
     }
 }
 

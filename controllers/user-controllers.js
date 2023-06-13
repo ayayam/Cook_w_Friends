@@ -6,7 +6,7 @@ module.exports = {
     const { _id } = req.params;
     Users.findOne({ _id: _id })
       .then((users) => {
-        console.log(users);
+        // console.log(users);
         res.render('pages/profile', {
           users: users,
         });
@@ -54,14 +54,15 @@ module.exports = {
   cookbook_get: (req, res) => {
     const { _id } = req.params;
     // const { username } = req.body;
-    console.log(_id)
+    // console.log(_id)
     // use when finding recipes with it's user_id
     Recipes.find({ user: _id })
     // Recipes.find({user: _id})
       .sort({ recipeName: 1 })
       .then((recipes) => {
-        console.log(recipes)
-        res.render('pages/cookbook', { recipes: recipes });
+        // console.log(recipes)
+        res.render('pages/cookbook', { recipes: recipes,
+        userId:_id });
       })
       .catch((err) => {
         console.log(err);
@@ -70,10 +71,13 @@ module.exports = {
 
   recipe_get: (req, res) => {
     const { _id } = req.params;
+    const { userId } = req.params;
+    console.log(_id);
     Recipes.findOne({ _id: _id })
       .then((recipe) => {
         res.render('pages/recipe', {
           recipe: recipe,
+          userId: userId
         });
       })
       .catch((err) => {
@@ -83,9 +87,11 @@ module.exports = {
 
   recipe_delete: (req, res) => {
     const { _id } = req.params;
+    const { userId } = req.params;
+    console.log(_id);
     Recipes.deleteOne({ _id: _id })
       .then(() => {
-        res.redirect('/user/:_id/cookbook');
+        res.redirect(`/user/${userId}/cookbook`);
       })
       .catch((err) => {
         console.log(err);
@@ -115,9 +121,8 @@ module.exports = {
 
     newRecipe.save();
 
-    res.render('pages/recipe');
+    res.redirect(`/user/${user}/cookbook`);
 
-    
   },
 
   update_recipe_get: (req, res) => {
@@ -140,7 +145,8 @@ module.exports = {
 
   update_recipe_put: (req, res) => {
     const { _id } = req.params;
-    const { recipeName, images, ingredients, instructions } = req.body;
+    const { recipeName, images, ingredients, instructions, user } = req.body;
+    // console.log(recipeName)
     Recipes.findByIdAndUpdate(
       _id,
       {
@@ -149,14 +155,13 @@ module.exports = {
           images: images,
           ingredients: ingredients,
           instructions: instructions,
+          user: user,
         },
       },
-      { new: true }
+      { new: false }
     )
       .then((recipe) => {
-        res.render('pages/recipe', {
-            recipe: recipe
-        });
+        res.redirect(`/user/${user}/cookbook`);
       })
       .catch((err) => {
         console.log(err);

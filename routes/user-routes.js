@@ -23,12 +23,14 @@ router.route('/:_id/create-recipe')
 
 router.route('/recipe/:_id/update-recipe')
     .get(userControllers.update_recipe_get)
+    .post(userControllers.update_recipe_put)
 
 router.route('/recipe/:_id')
-    .get(userControllers.recipe_get)
+    
     .post(userControllers.create_recipe_post)
-    .post(userControllers.update_recipe_put)
+    
+router.route('/:userId/recipe/:_id')
+    .get(userControllers.recipe_get)
     .delete(userControllers.recipe_delete)
-
 
 module.exports = router;

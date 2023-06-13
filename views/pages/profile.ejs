@@ -1,32 +1,6 @@
 <%- include('../partials/head') -%>
-<%# include('../partials/navbarRegistered') #%>
-<body>
-    <header class="header">
-        <a class="logo-container" href="/user/profile/">
-            <img class="logo" src="/image/LogoIcon.png" alt="Cook with Friends logo">
-            <p class="header-title-link header-title" href="/user/profile/">Cook with Friends</p> 
-        </a>
-        
-        <nav class="navbar-user">
-            <a class="navlinks" href="/user/<%= users.id %>">Profile</a>
-            <a class="navlinks" href="/user/:_id/cookbook">Cookbook</a>
-            <a class="navlinks" href="/user/friends/">Friends</a>
-            <a class="navlinks" href="/user/shopping-list/">Shopping List</a>
-            <a class="navlinks" href="/search">Search</a>
-            <a class="navlinks" href="/logout">Logout</a>
-        </nav>
-        <section class="hamburger-dropdown">
-            <a class="hamburger-menu" onclick="hamburgerDropdown()"><i class="fa-solid fa-bars"></i></a>
-            <div id="hamburgerDropdown" class="hamburger-dropdown-content">
-                <a class="hamburger-link" href="/user/<%= users.id %>">Profile</a>
-                <a class="hamburger-link" href="/user/:_id/cookbook">Cookbook</a>
-                <a class="hamburger-link" href="/user/friends/">Friends</a>
-                <a class="hamburger-link" href="/user/shopping-list/">Shopping List</a>
-                <a class="hamburger-link" href="/search">Search</a>
-                <a class="hamburger-link" href="/logout">Logout</a>
-            </div> 
-        </section>
-    </header>
+<%- include('../partials/navbarRegistered') -%>
+
 
     <main class="profile-container">
 
@@ -54,7 +28,7 @@
         </section>  -->
         <section class="profile-links">
             <ul class="user-actions"> 
-                <a class="profile-button" href="/user/<%= users.id %>/cookbook"><button class="action">My Cookbook</button></a>
+                <a class="profile-button" href="/user/<%= users.id %>/cookbook" target="_blank"><button class="action">My Cookbook</button></a>
                 <a class="profile-button" href="/user/friends/"><button class="action">My Friends</button></a>
                 <a class="profile-button" href="/user/shopping-list/"><button class="action">Shopping List</button></a>
                 <a class="profile-button" href="/search"><button class="action">Search</button></a>

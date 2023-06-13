@@ -6,11 +6,16 @@
         <h1 class="recipe-title">
             Update<span style="color: var(--red)"> <%= recipe.recipeName %></span></h1>
     </header>
-    <form class="new-recipe-form" action="/recipe/<%= recipe._id %>" method="POST">
+    <form class="new-recipe-form" action="../<%= recipe._id %>/update-recipe" method="POST">
         <section class="new-recipe">
             <label class="label" for="new-recipe-title">Enter Recipe Name:</label>
-            <input type="text" class="input" id="new-recipe-title" value="<%= recipe.recipeName %>">
+            <input type="text" class="input" name="recipeName" id="new-recipe-title" value="<%= recipe.recipeName %>">
         </section>    
+
+        <section class="new-recipe">
+            <label class="label" for="user">Enter User Id:</label>
+            <input type="text" class="input" id="user" name="user" value="<%= recipe.user %>">
+        </section>
 
         <section class="new-recipe">
             <label class="label" for="images">Enter Image File Name:</label>
@@ -24,7 +29,7 @@
         </section> -->
 
         <section class="ingredients-instructions">
-            
+
             <section class="new-ingredients">
                 <label for="ingredients" class="ingredients-title label">Ingredients:</label>
                 <textarea id="ingredients" name="ingredients" class="new-recipe-input" value=""><%= recipe.ingredients %></textarea>

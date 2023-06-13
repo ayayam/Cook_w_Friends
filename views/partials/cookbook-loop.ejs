@@ -1,11 +1,17 @@
 <% for (recipe of recipes) { %>
     <figure class="recipe-row">
-        <a class="recipe-link" href="../recipe/<%= recipe._id %>">
+        <a class="recipe-link" href="/user/<%= userId %>/recipe/<%= recipe._id %>">
             <img class="recipe-img" 
             src="/image/<%= recipe.images %>" 
             alt="<%= recipe.recipeName %>">
         </a>
-            <figcaption class="recipe-figcaption"><a class="recipe-link" href="../recipe/<%= recipe._id %>"><%= recipe.recipeName %></a></figcaption>
-    </figure>
+            <figcaption class="recipe-figcaption"><a class="recipe-link" href="/user/<%= userId %>/recipe/<%= recipe._id %>"><%= recipe.recipeName %></a></figcaption>
+    
+    <!-- <form action="/user/:_id/cookbook?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded">
+
+        <button class="button edit" type="submit">Delete</button>
+
+    </form> -->
+</figure>
 <% } %>
 
