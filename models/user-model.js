@@ -6,7 +6,6 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const mongooseFindOrCreate = require('mongoose-findorcreate');
 
 const userSchema = new Schema ({
-    _id: Schema.Types.ObjectId,
 
     firstName: {
         type: String,
