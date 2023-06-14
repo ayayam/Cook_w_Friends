@@ -26,7 +26,6 @@ router.route('/recipe/:_id/update-recipe')
     .post(userControllers.update_recipe_put)
 
 router.route('/recipe/:_id')
-    
     .post(userControllers.create_recipe_post)
     
 router.route('/:userId/recipe/:_id')

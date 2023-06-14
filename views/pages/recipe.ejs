@@ -5,7 +5,7 @@
 
         <header class="recipe-header">
             <h1 class="recipe-title"><%= recipe.recipeName %></h1>
-            <a class="button" href="/user/<%= userId %>/recipe/<%= recipe._id %>/update-recipe"> 
+            <a class="button" href="/user/recipe/<%= recipe._id %>/update-recipe"> 
                 <button class="edit" type="submit">Edit</button>
             </a>
             <form action="/user/<%= userId %>/recipe/<%= recipe._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded">
