@@ -32,7 +32,7 @@ router.route('/logout')
     .get(siteController.logout)
 
 router.route('/shopping-list')
-    .get(siteController.shopping_list)
+    .get(siteController.shopping_list_get)
 
 
 module.exports = router;

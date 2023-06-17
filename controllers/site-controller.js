@@ -102,7 +102,7 @@ module.exports = {
     });
   },
 
-  shopping_list: (req, res) => {
+  shopping_list_get: (req, res) => {
     res.render('pages/shopping_list');
   },
 };
