@@ -18,6 +18,9 @@ router.route('/register')
     .get(siteController.register_get)
     .post(siteController.register_post)
 
+router.route('/shopping-list')
+    .get(siteController.shopping_list_get)
+
 router.route('/search')
     .get(siteController.search_get)
     .post(siteController.search_post) //?
@@ -30,9 +33,6 @@ router.route('/auth/google/admin')
 
 router.route('/logout')
     .get(siteController.logout)
-
-router.route('/shopping-list')
-    .get(siteController.shopping_list_get)
 
 
 module.exports = router;

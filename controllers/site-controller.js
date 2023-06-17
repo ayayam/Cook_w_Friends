@@ -60,6 +60,10 @@ module.exports = {
     });
   },
 
+  shopping_list_get: (req, res) => {
+    res.render('pages/shopping_list');
+  },
+
   // THIS ONE WORKS WITH JUST USERNAME AND PASSWORD
   // register_post: (req, res) => {
   //   Users.register({username: req.body.username}, req.body.password, (err, user) => {
@@ -102,7 +106,4 @@ module.exports = {
     });
   },
 
-  shopping_list_get: (req, res) => {
-    res.render('pages/shopping_list');
-  },
 };
