@@ -103,6 +103,6 @@ module.exports = {
   },
 
   shopping_list: (req, res) => {
-    res.render('pages/shopping_list')
+    res.render('pages/shopping_list', {})
   }
 };
