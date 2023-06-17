@@ -101,4 +101,8 @@ module.exports = {
       res.redirect('/');
     });
   },
+
+  shopping_list: (req, res) => {
+    res.render('pages/shopping_list')
+  }
 };

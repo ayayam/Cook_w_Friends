@@ -31,7 +31,8 @@ router.route('/auth/google/admin')
 router.route('/logout')
     .get(siteController.logout)
 
-
+router.router('shopping-list')
+    .get(siteController.shopping_list)
 
 
 module.exports = router;
