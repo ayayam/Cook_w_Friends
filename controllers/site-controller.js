@@ -61,7 +61,7 @@ module.exports = {
   },
 
   shopping_list_get: (req, res) => {
-    res.render('pages/shopping_list');
+    res.render('pages/shopping_list', {});
   },
 
   // THIS ONE WORKS WITH JUST USERNAME AND PASSWORD
