@@ -76,7 +76,7 @@ module.exports = {
 
 
   search_get: (req, res) => {
-    res.render("pages/search");
+    res.render('pages/search');
   },
 
   search_post: (req, res) => {},
@@ -103,6 +103,6 @@ module.exports = {
   },
 
   shopping_list: (req, res) => {
-    res.render('pages/shopping_list', {})
-  }
+    res.render('pages/shopping_list');
+  },
 };
