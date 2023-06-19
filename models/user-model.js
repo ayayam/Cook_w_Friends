@@ -38,10 +38,11 @@ const userSchema = new Schema ({
     friendsList: {
         type: Array,
     },
-    recipesList: [ 
-        {type: Schema.Types.ObjectId,
-        ref: "Recipes"}
-    ]
+    recipesList: {
+        type: Array,
+        // {type: Schema.Types.ObjectId,
+        // ref: "Recipes"}
+    }
         
 });
 
