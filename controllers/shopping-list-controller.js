@@ -25,5 +25,5 @@ module.exports = {
                 console.log(err);
             });
         // add ingredient items to ingredients collections, then use another post to another route (shopping list route) and make a copy to the shopping list collection
-    }
+    },
 }
