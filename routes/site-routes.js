@@ -18,8 +18,6 @@ router.route('/register')
     .get(siteController.register_get)
     .post(siteController.register_post)
 
-router.route('/shopping-list')
-    .get(siteController.shopping_list_get)
 
 router.route('/search')
     .get(siteController.search_get)
