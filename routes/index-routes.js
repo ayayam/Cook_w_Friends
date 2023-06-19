@@ -9,7 +9,7 @@ const router = express.Router();
 router.use('/', siteRoutes);
 router.use('/admin', adminRoutes);
 router.use('/user', userRoutes);
-router.use('/user/friends', friendsRoutes);
+router.use('/friends', friendsRoutes);
 router.use('/shopping-list', shoppingListRoutes);
 
 module.exports = router;
