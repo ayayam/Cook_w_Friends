@@ -888,7 +888,7 @@ button.action:active {
 .show {
     display:block;
 }
-.magnifying-glass {
+.mag-glass-icon {
     height: 100%;
     width: 40px;
     align-self: center;
