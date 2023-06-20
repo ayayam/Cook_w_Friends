@@ -75,7 +75,7 @@ passport.deserializeUser(function(user, cb) {
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/google/admin"
+    callbackURL: "https://cookwithfriends.onrender.com/auth/google/admin"
 },
 function(accessToken, refreshToken, email, cb) {
     Users.findOrCreate({ googleId: email.id}, function(err, user) {
