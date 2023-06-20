@@ -182,7 +182,7 @@ button.action:active {
     width: 100%;
     color: var(--white);
     text-decoration: none;
-    font-size: 3em;
+    font-size: 4vw;
     font-family: var(--shadows);  
 }
 
@@ -206,7 +206,7 @@ button.action:active {
     text-align: center;
     width: 100%;
     align-self: center;
-    font-size: 1.1em;
+    font-size: 1.6vw;
     justify-content: center;
     font-family: var(--rubik);
 }
